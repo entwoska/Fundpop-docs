@@ -51,6 +51,8 @@ jobs:
         uses: peter-evans/create-pull-request@v4
         with:
           title: Auto Compress Images
+          token: ${{ secrets.GITHUB_TOKEN }}
+          githubToken: ${{ secrets.GITHUB_TOKEN }}
           branch-suffix: timestamp
           commit-message: Compress Images
           body: ${{ steps.calibre.outputs.markdown }}
