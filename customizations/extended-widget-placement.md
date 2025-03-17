@@ -24,4 +24,8 @@ With custom development support from our team, you can display campaign progress
 * Increase campaign visibility as customers browse your store
 * Create urgency and interest before customers even reach the product page
 
-This advanced integration requires custom code implementation. Contact our development team at [info@fizzy.studio](mailto:info@fizzy.studio) or on our in-app chat to enable collection view integration for your store.
+<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Extend campaign visibility by displaying progress directly in collection views. Fully customizable with color, size, and radius options to match your brand.</p></figcaption></figure>
+
+{% hint style="info" %}
+This integration requires custom code implementation. Contact our development team at [info@fizzy.studio](mailto:info@fizzy.studio) or on our in-app chat to enable collection view integration for your store.
+{% endhint %}
