@@ -140,9 +140,9 @@ Set intermediate targets to reward backers and build momentum during your campai
 * Offer special rewards at different funding levels
 * Note: Requires at least one campaign product
 
-\[Documentation coming soon]
+[Milestones documentation](../advanced-features/milestones.md) →
 
-#### Product Bundle
+#### Reward Tiers
 
 Create special bundles to offer unique perks for different contribution levels.
 
@@ -150,7 +150,7 @@ Create special bundles to offer unique perks for different contribution levels.
 * Bundle products with exclusive perks
 * Note: Requires at least one campaign product
 
-\[Documentation coming soon]
+[Reward tiers documentation](../advanced-features/reward-tiers.md) →
 
 ### Finalizing Your Campaign
 
