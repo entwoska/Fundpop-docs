@@ -72,6 +72,23 @@ Set your funding target:
    * Optionally set initial funding
    * Add initial backer count if desired
 
+{% hint style="info" %}
+### Initial Funding and backer count
+
+When setting up your campaign goal, you have the option to add initial funding to your campaign. This feature allows you to account for:
+
+* Contributions collected offline or through other channels
+* Pre-campaign commitments from early supporters
+* Funding secured before the official campaign launch
+* Previous sales that should count toward your campaign total
+
+**How Initial Funding Works:**
+
+* The initial funding amount is added to your campaign progress from the moment it launches
+* Progress bars and statistics will reflect this initial amount immediately
+* Your campaign's success calculation includes this initial funding when determining if you've hit your goal
+{% endhint %}
+
 <figure><img src="../.gitbook/assets/FP-campaign-5.png" alt=""><figcaption><p>Campaign goal section displaying both options</p></figcaption></figure>
 
 ### Step 5: Campaign Duration
