@@ -29,6 +29,8 @@ jobs:
     name: calibreapp/image-actions
     runs-on: ubuntu-latest
     # Only run on main repo on and PRs that match the main repo.
+    permissions:
+      contents: write
     if: |
       github.repository == 'entwoska/Fundpop-docs' &&
       (github.event_name != 'pull_request' ||
