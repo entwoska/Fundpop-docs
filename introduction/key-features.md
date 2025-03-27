@@ -58,4 +58,4 @@ Ready to launch your first campaign? Follow our step-by-step guides:
 2. [Creating Your First Campaign](../getting-started/creating-your-first-campaign.md)
 3. [Customizing Your Widget](../customizations/fundpop-widget-templates.md)
 
-For custom integrations or specific feature requests, contact our team at info@fizzy.studio
+For custom integrations or specific feature requests, contact our team at [support@fizzy.studio](mailto:support@fizzy.studio)

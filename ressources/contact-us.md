@@ -8,7 +8,7 @@ Get assistance through our chat box, available directly in the Fundpop app.
 
 #### Email
 
-Contact our team at info@fizzy.studio
+Contact our team at [support@fizzy.studio](mailto:support@fizzy.studio)
 
 ### Custom Solutions
 

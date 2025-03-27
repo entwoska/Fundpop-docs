@@ -52,5 +52,5 @@ If you can't access the onboarding flow or prefer manual installation:
 If you're using an Online Store 1.0 / Vintage theme, contact our team for custom installation support:
 
 * Via in-app chat
-* Email: [info@fizzy.studio](mailto:info@fizzy.studio)
+* Email: [support@fizzy.studio](mailto:support@fizzy.studio)
 
