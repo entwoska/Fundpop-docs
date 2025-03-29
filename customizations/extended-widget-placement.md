@@ -18,9 +18,9 @@ Note: Only one campaign can be pinned at a time; pinning a new campaign will rep
 
 ### Product Card Integration
 
-With custom development support from our team, you can display campaign progress directly in collection views:
+With custom development support from our team, you can display campaign progress directly in collection views, or anywhere a product card from your campaigns appear:
 
-* Show progress bars under product cards in collection listings
+* Show progress bars under product cards in collection listings or homepage
 * Increase campaign visibility as customers browse your store
 * Create urgency and interest before customers even reach the product page
 
