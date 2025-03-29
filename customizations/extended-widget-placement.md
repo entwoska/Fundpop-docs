@@ -16,7 +16,7 @@ To pin a campaign to your homepage:
 
 Note: Only one campaign can be pinned at a time; pinning a new campaign will replace any previously pinned campaign.
 
-### Collection View Integration
+### Product Card Integration
 
 With custom development support from our team, you can display campaign progress directly in collection views:
 
