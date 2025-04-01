@@ -99,6 +99,20 @@ Manage when backers can see your reward tier:
    * Set strategic time windows for special offers
    * Keep track of remaining spots
 
+### Homepage and Bundle Display
+
+You can display reward tiers directly on your homepage and bundle product pages, increasing visibility and conversion opportunities:
+
+* **Homepage Display**: Showcase selected reward tiers on your store's homepage to attract immediate attention
+* **Bundle Product Pages**: Display relevant reward tiers on bundle product pages
+* **Confirmation Dialog**: A confirmation prompt appears when pinning reward tiers to ensure intentional changes
+
+<figure><img src="../.gitbook/assets/FP-tiers-6.jpg" alt=""><figcaption><p>Pin reward tiers to your homepage to drive immediate conversion from your store's most visited page</p></figcaption></figure>
+
+{% hint style="info" %}
+This option will be visible for saved campaigns only
+{% endhint %}
+
 ### Managing Reward Tiers
 
 * Monitor tier performance in your campaign dashboard
