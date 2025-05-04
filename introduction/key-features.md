@@ -45,7 +45,7 @@ description: >-
 
 ### Available Plans
 
-* Free: Development stores or up to 2 lifetime campaigns for live stores
+* Free: Available only for development stores
 * Standard ($9.99/month): Core features
 * Pro ($29.99/month): Advanced features including milestones and reward tiers
 * Premium ($99/month): Full feature set with priority support and customization
