@@ -109,8 +109,6 @@ Configure your campaign timeline:
 
 Define how backers will support your campaign:
 
-Define how backers will support your campaign:
-
 Select order method:
 
 * **Order now**: Immediate purchase and payment
