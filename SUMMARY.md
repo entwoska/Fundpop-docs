@@ -20,7 +20,6 @@
 ## CAMPAIGN MANAGEMENT
 
 * [🛒 Orders](campaign-management/orders.md)
-* [📊 Campaign Analytics](campaign-management/campaign-analytics.md)
 
 ## ADVANCED FEATURES
 

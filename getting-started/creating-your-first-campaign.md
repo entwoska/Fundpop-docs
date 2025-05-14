@@ -46,8 +46,6 @@ This option will be visible for saved campaigns only
 
 <figure><img src="../.gitbook/assets/FP-campaign-8.png" alt=""><figcaption><p>Pin your most important campaign to your store's homepage. This campaign will appear both on your product page and homepage - helpful tip: pin your most active campaign to maximize visibility</p></figcaption></figure>
 
-
-
 ### Step 3: Campaign Products
 
 Select products to feature in your campaign:
@@ -73,7 +71,7 @@ Set your funding target:
    * Add initial backer count if desired
 
 {% hint style="info" %}
-### Initial Funding and backer count
+#### Initial Funding and backer count
 
 When setting up your campaign goal, you have the option to add initial funding to your campaign. This feature allows you to account for:
 
@@ -103,7 +101,7 @@ Configure your campaign timeline:
    * Enter specific number of days
    * Review exact start and end dates/times
 
-<figure><img src="../.gitbook/assets/FP-campaign-6.png" alt=""><figcaption><p> Duration section with calendar and slider</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-6.png" alt=""><figcaption><p>Duration section with calendar and slider</p></figcaption></figure>
 
 ### Step 6: Order Options
 
@@ -131,19 +129,19 @@ For pre-order campaigns, you can set:
 The pre-order selling plan name helps customers identify their purchase as a pre-order during checkout. For example, you might enter **Pre-order - Ships January 2026** or **Early Bird Special**.
 
 {% hint style="info" %}
-#### Automatic Payment Processing
+**Automatic Payment Processing**
 
 Fundpop automatically handles payments when campaigns end:
 
 * **All-or-nothing campaigns**: Payments are automatically captured only if the campaign succeeds
 * **Flexible campaigns**: Payments are automatically captured regardless of campaign success
 
-This automation streamlines your post-campaign workflow and ensures timely payment processing. \
+This automation streamlines your post-campaign workflow and ensures timely payment processing.\
 \
-[⚠️](https://emojipedia.org/warning) After a campaign ends, we recommend consulting your Fundpop dashboard to verify payment processing status. Review your Orders section to confirm all payments were successfully captured and  identify any orders that may require manual attention or intervention.
+[⚠️](https://emojipedia.org/warning) After a campaign ends, we recommend consulting your Fundpop dashboard to verify payment processing status. Review your Orders section to confirm all payments were successfully captured and identify any orders that may require manual attention or intervention.
 {% endhint %}
 
-<figure><img src="../.gitbook/assets/FP-campaign-7.png" alt=""><figcaption><p> Order options section with pre-order settings</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-7.png" alt=""><figcaption><p>Order options section with pre-order settings</p></figcaption></figure>
 
 ### Step 7: Advanced Features (Pro/Premium Only)
 
