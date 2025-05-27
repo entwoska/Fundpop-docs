@@ -53,7 +53,9 @@ This option will be visible for saved campaigns only
 Select products to feature in your campaign:
 
 1. Click "Select products"
-2. Choose up to 5 products from your store
+2. Choose products from your store:
+   * Standard/Pro plans: Up to 5 products per campaign
+   * Premium plan: Up to 25 products per campaign
 3. Fundpop widget will appear on all selected product pages and each sales will contribute to the overall campaign progress
 
 Note: At least one product must be selected to enable features like milestones and bundles.

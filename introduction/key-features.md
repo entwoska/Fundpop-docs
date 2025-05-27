@@ -45,10 +45,10 @@ description: >-
 
 ### Available Plans
 
-* Free: Available only for development stores
-* Standard ($9.99/month): Core features
-* Pro ($29.99/month): Advanced features including milestones and reward tiers
-* Premium ($99/month): Full feature set with priority support and customization
+* Free: For development stores only
+* Standard ($9.99/month): Core features, up to 5 products per campaign
+* Pro ($29.99/month): Advanced features including milestones and reward tiers, up to 5 products per campaign
+* Premium ($99/month): Full feature set with priority support and customization, up to 25 products per campaign
 
 ### Get Started
 
