@@ -67,6 +67,19 @@ function main() {
   const wrongCategory = [];
   const extraInHS = [];
 
+  function normLower(s) { return String(s || '').normalize('NFKD').trim().toLowerCase(); }
+
+  function sectionMatchesCollection(expectedSection, collectionName) {
+    const exp = normLower(expectedSection);
+    const col = normLower(collectionName);
+    if (exp === col) return true;
+    if (exp.includes('faq') && col.includes('faq')) return true;
+    if (exp.includes('ressource') && col.includes('ressource')) return true;
+    if (exp.includes('getting started') && col.includes('installing and using fundpop')) return true;
+    if (exp.includes('introduction') && col.includes('installing and using fundpop')) return true;
+    return false;
+  }
+
   for (const e of expected) {
     const a = bySlug.get(e.slug) || byTitle.get(normalizeTitle(e.title));
     if (!a) {
@@ -76,7 +89,12 @@ function main() {
     // Vérifier catégorie et collection
     const coll = collIdTo.get(String(a.collectionId));
     const cats = (a.categories || []).map(id => catIdTo.get(String(id))).filter(Boolean);
-    const inSection = cats.some(c => normalize(c?.name) === normalize(e.section));
+    let inSection = false;
+    if (coll && sectionMatchesCollection(e.section, coll.name)) {
+      inSection = true;
+    } else {
+      inSection = cats.some(c => String(c?.name || '').trim().toLowerCase() === String(e.section || '').trim().toLowerCase());
+    }
     if (!inSection) {
       wrongCategory.push({ slug: e.slug, title: a.name, currentCategories: cats.map(c => c?.name), expectedSection: e.section });
     }

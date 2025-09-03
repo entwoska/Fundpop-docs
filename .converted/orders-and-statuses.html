@@ -1,0 +1,26 @@
+
+<h2 id="user-content-how-do-order-statuses-change-for-mixed-pre-order-campaigns">How do order statuses change for mixed pre-order campaigns?</h2>
+<p>When an order contains multiple pre-order products from different campaigns, the order status will change throughout the lifecycle of the campaigns. Here's how it works:</p>
+<p><strong>Initial Status After Checkout</strong></p>
+<ul>
+<li>If the order only contains pre-order items, the status will be <strong>Pending</strong></li>
+<li>If the order includes a pledge fee or regular (non-pre-order) products, the status will be <strong>Partially Paid</strong></li>
+</ul>
+<p><strong>When First Campaign Ends</strong></p>
+<ul>
+<li>When the first campaign reaches its end date, the status changes to <strong>Paid</strong></li>
+<li>At this point, ALL pre-order items in the order are charged (not just items from the first campaign)</li>
+<li>This happens because Shopify processes all deferred payments in an order based on the earliest due date</li>
+</ul>
+<p><strong>If Later Campaigns Fail</strong></p>
+<ul>
+<li>If a later (All-or-nothing) campaign fails, we automatically initiate a refund for items from that campaign only</li>
+<li>The order status changes to <strong>Partially Refunded</strong></li>
+<li>Items from successful campaigns remain paid and are not affected</li>
+</ul>
+<p>For example: An order contains pre-order Product A (Campaign 1) and pre-order Product B (Campaign 2):</p>
+<ol>
+<li>Initial status: <strong>Pending</strong></li>
+<li>Campaign 1 succeeds and reaches end date: Status becomes <strong>Paid</strong> (both A and B are charged)</li>
+<li>Campaign 2 fails: Status becomes <strong>Partially Refunded</strong> (refund issued for Product B only)</li>
+</ol>

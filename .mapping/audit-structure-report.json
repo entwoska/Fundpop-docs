@@ -1,0 +1,21 @@
+{
+  "summary": {
+    "expectedCount": 30,
+    "hsArticleCount": 62,
+    "missingInHS": 0,
+    "wrongCategory": 1,
+    "extraInHS": 0
+  },
+  "missingInHS": [],
+  "wrongCategory": [
+    {
+      "slug": "theme-compatibility",
+      "title": "🎭 Theme Compatibility",
+      "currentCategories": [
+        "Theme Integration"
+      ],
+      "expectedSection": "FAQs"
+    }
+  ],
+  "extraInHS": []
+}

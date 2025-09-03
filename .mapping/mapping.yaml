@@ -1,0 +1,212 @@
+site: null
+collections:
+  - name: Introduction
+    id: null
+    categories:
+      - name: Introduction
+        id: null
+        articles:
+          - file: README.md
+            title: README
+            slug: readme
+            id: null
+            order: 1
+          - file: introduction/key-features.md
+            title: key-features
+            slug: key-features
+            id: null
+            order: 2
+  - name: Getting Started
+    id: null
+    categories:
+      - name: Getting Started
+        id: null
+        articles:
+          - file: getting-started/install-fundpop.md
+            title: install-fundpop
+            slug: install-fundpop
+            id: null
+            order: 1
+          - file: getting-started/creating-your-first-campaign.md
+            title: creating-your-first-campaign
+            slug: creating-your-first-campaign
+            id: null
+            order: 2
+          - file: getting-started/dashboard-overview.md
+            title: dashboard-overview
+            slug: dashboard-overview
+            id: null
+            order: 3
+  - name: CUSTOMIZATIONS
+    id: null
+    categories:
+      - name: CUSTOMIZATIONS
+        id: null
+        articles:
+          - file: customizations/fundpop-widget-templates.md
+            title: fundpop-widget-templates
+            slug: fundpop-widget-templates
+            id: null
+            order: 1
+          - file: customizations/extended-widget-placement.md
+            title: extended-widget-placement
+            slug: extended-widget-placement
+            id: null
+            order: 2
+          - file: customizations/translation.md
+            title: translation
+            slug: translation
+            id: null
+            order: 3
+          - file: customizations/widget-preview-drafts.md
+            title: widget-preview-drafts
+            slug: widget-preview-drafts
+            id: null
+            order: 4
+  - name: WIDGETS
+    id: null
+    categories:
+      - name: WIDGETS
+        id: null
+        articles:
+          - file: widgets/main-widget.md
+            title: main-widget
+            slug: main-widget
+            id: null
+            order: 1
+          - file: widgets/reward-tiers-widget.md
+            title: reward-tiers-widget
+            slug: reward-tiers-widget
+            id: null
+            order: 2
+          - file: widgets/product-card-progress-bar.md
+            title: product-card-progress-bar
+            slug: product-card-progress-bar
+            id: null
+            order: 3
+          - file: widgets/featured-campaign-widget.md
+            title: featured-campaign-widget
+            slug: featured-campaign-widget
+            id: null
+            order: 4
+          - file: widgets/campaign-collection-widget.md
+            title: campaign-collection-widget
+            slug: campaign-collection-widget
+            id: null
+            order: 5
+  - name: CAMPAIGN MANAGEMENT
+    id: null
+    categories:
+      - name: CAMPAIGN MANAGEMENT
+        id: null
+        articles:
+          - file: campaign-management/orders.md
+            title: orders
+            slug: orders
+            id: null
+            order: 1
+          - file: campaign-management/campaign-analytics.md
+            title: campaign-analytics
+            slug: campaign-analytics
+            id: null
+            order: 2
+          - file: campaign-management/campaign-timing.md
+            title: campaign-timing
+            slug: campaign-timing
+            id: null
+            order: 3
+  - name: ADVANCED FEATURES
+    id: null
+    categories:
+      - name: ADVANCED FEATURES
+        id: null
+        articles:
+          - file: advanced-features/milestones.md
+            title: milestones
+            slug: milestones
+            id: null
+            order: 1
+          - file: advanced-features/reward-tiers.md
+            title: reward-tiers
+            slug: reward-tiers
+            id: null
+            order: 2
+  - name: FAQs
+    id: null
+    categories:
+      - name: FAQs
+        id: null
+        articles:
+          - file: faqs/payments-and-fees.md
+            title: payments-and-fees
+            slug: payments-and-fees
+            id: null
+            order: 1
+          - file: faqs/orders-and-statuses.md
+            title: orders-and-statuses
+            slug: orders-and-statuses
+            id: null
+            order: 2
+          - file: faqs/selling-plan-recovery.md
+            title: selling-plan-recovery
+            slug: selling-plan-recovery
+            id: null
+            order: 3
+          - file: faqs/theme-compatibility.md
+            title: theme-compatibility
+            slug: theme-compatibility
+            id: null
+            order: 4
+  - name: RESSOURCES
+    id: null
+    categories:
+      - name: RESSOURCES
+        id: null
+        articles:
+          - file: ressources/contact-us.md
+            title: contact-us
+            slug: contact-us
+            id: null
+            order: 1
+  - name: THEME INTEGRATION
+    id: null
+    categories:
+      - name: THEME INTEGRATION
+        id: null
+        articles:
+          - file: theme-integration/page-templates.md
+            title: page-templates
+            slug: page-templates
+            id: null
+            order: 1
+          - file: theme-integration/compatibility-bypass.md
+            title: compatibility-bypass
+            slug: compatibility-bypass
+            id: null
+            order: 2
+          - file: theme-integration/theme-editor-preview.md
+            title: theme-editor-preview
+            slug: theme-editor-preview
+            id: null
+            order: 3
+  - name: BEST PRACTICES
+    id: null
+    categories:
+      - name: BEST PRACTICES
+        id: null
+        articles:
+          - file: best-practices/variant-images.md
+            title: variant-images
+            slug: variant-images
+            id: null
+            order: 1
+          - file: best-practices/auto-end-vs-manual.md
+            title: auto-end-vs-manual
+            slug: auto-end-vs-manual
+            id: null
+            order: 2
+          - file: best-practices/collection-targeting.md
+            title: collection-targeting
+            slug: collection-targeting
+            id: null
+            order: 3

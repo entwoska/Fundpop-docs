@@ -1,0 +1,28 @@
+[
+  {
+    "action": "update",
+    "id": "68668f5a011f620cfed5e38f",
+    "slug": "payments-and-fees",
+    "title": "💵 Payments and Fees",
+    "status": "published"
+  },
+  {
+    "action": "update",
+    "id": "68668feb414c086028536a00",
+    "slug": "orders-and-statuses",
+    "title": "📦 Orders and Statuses",
+    "status": "published"
+  },
+  {
+    "action": "update",
+    "id": "68b1c0853c43f010de4b9f17",
+    "slug": "selling-plan-recovery",
+    "title": "🧯 Selling Plan Recovery",
+    "status": "published"
+  },
+  {
+    "action": "error",
+    "file": "faqs/theme-compatibility.md",
+    "error": "{\"categories\":[\"Category id is not valid: 68b1c3db27acf320d37459ac\"]}"
+  }
+]

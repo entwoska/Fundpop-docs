@@ -1,0 +1,92 @@
+[
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c955ecdb310006b7e50ec",
+    "name": "Introduction",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c9568cdb310006b7e50ee",
+    "name": "Getting Started",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c957979db1f0662bb17cd",
+    "name": "Customizations",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c95925b07a90ce479dba9",
+    "name": "Campaign Management",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c95a979db1f0662bb17ce",
+    "name": "Advanced Features",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "68b1ba3e27acf320d3745977",
+    "name": "Widgets",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "68b1c04776022c3f8b9eba53",
+    "name": "Theme Integration",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "68b1c047a00b8f11821d3c42",
+    "name": "Best Practices",
+    "updated": true
+  },
+  {
+    "collection": "Installing and using Fundpop",
+    "id": "682c9283cdb310006b7e50da",
+    "name": "Uncategorized",
+    "error": "{\"name\":[\"The 'Uncategorized' category cannot be updated\"]}"
+  },
+  {
+    "collection": "FAQs",
+    "id": "682c9af2427f7c767e56e37a",
+    "name": "Orders and Statuses",
+    "updated": true
+  },
+  {
+    "collection": "FAQs",
+    "id": "68b1c3db27acf320d37459ac",
+    "name": "General",
+    "updated": true
+  },
+  {
+    "collection": "FAQs",
+    "id": "682c9abea2b77a5558932d96",
+    "name": "Payments and Fees",
+    "updated": true
+  },
+  {
+    "collection": "FAQs",
+    "id": "682c9aa66e358c0bda2baa56",
+    "name": "Uncategorized",
+    "error": "{\"name\":[\"The 'Uncategorized' category cannot be updated\"]}"
+  },
+  {
+    "collection": "Ressources and Contact",
+    "id": "68b1c3dc3c43f010de4b9f32",
+    "name": "General",
+    "updated": true
+  },
+  {
+    "collection": "Ressources and Contact",
+    "id": "686693d0b577ac399a5115e0",
+    "name": "Uncategorized",
+    "error": "{\"name\":[\"The 'Uncategorized' category cannot be updated\"]}"
+  }
+]

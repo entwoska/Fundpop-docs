@@ -1,0 +1,38 @@
+
+<h2 id="user-content-how-are-payments-handled-for-items-from-different-pre-order-campaigns-in-the-same-order">How are payments handled for items from different pre-order campaigns in the same order?</h2>
+<p>Due to <a href="https://shopify.dev/docs/apps/build/purchase-options/deferred#limitations">Shopify's single payment capture date limitation</a>, when a customer orders pre-order items from multiple campaigns in the same order, all items will be charged when the earliest campaign ends. Here's how different campaign combinations are handled:</p>
+<ol>
+<li>Multiple All-or-nothing Campaigns:
+<ul>
+<li>All items are charged when the earliest campaign ends</li>
+<li>Each campaign's success/failure is handled independently:
+<ul>
+<li>If a campaign fails: Refund only items from that campaign</li>
+<li>Success/failure of one campaign doesn't affect items from other campaigns</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Mix of All-or-nothing and Flexible Campaigns:
+<ul>
+<li>All items are charged when the earliest campaign ends</li>
+<li>For All-or-nothing campaigns: Refund items only from campaigns that fail</li>
+<li>For Flexible campaigns: Items keep payment regardless of goals</li>
+</ul>
+</li>
+<li>Multiple Flexible Campaigns:
+<ul>
+<li>All items are charged when the earliest campaign ends</li>
+<li>All items keep payments regardless of goals</li>
+<li>No refunds needed</li>
+</ul>
+</li>
+</ol>
+<p>Example: A customer orders items from three campaigns in the same order:</p>
+<ul>
+<li>Item A from Campaign 1 (All-or-nothing, ending March 1)</li>
+<li>Item B from Campaign 2 (All-or-nothing, ending March 1)</li>
+<li>Item C from Campaign 3 (Flexible, ending March 15)</li>
+</ul>
+<p>All items will be charged on March 1. Even though Campaign 1 and 2 end on the same date, their success/failure is evaluated independently. If Campaign 1 fails but Campaign 2 succeeds, only Item A needs to be cancelled. If both Campaign 1 and 2 fail, both Item A and B would need to be cancelled. Item C keeps its payment regardless of Campaign 3's outcome since it's a flexible campaign.</p>
+<div style="border-left:4px solid #10b981;background:#ecfdf5;border-radius:8px;padding:14px 16px;margin:16px 0"><div style="display:flex;gap:12px;align-items:flex-start"><div style="font-size:20px;line-height:1;margin-top:2px">✅</div><div style="margin:0"><p>Pro tip: Use the order status filters to focus on orders that need immediate attention, such as processing pending payments or handling partially paid orders.</p></div></div></div>

@@ -1,0 +1,272 @@
+[
+  {
+    "collectionName": "Introduction",
+    "categoryName": "Introduction",
+    "articleTitle": "README",
+    "slug": "readme",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1294
+  },
+  {
+    "collectionName": "Introduction",
+    "categoryName": "Introduction",
+    "articleTitle": "key-features",
+    "slug": "key-features",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 3093
+  },
+  {
+    "collectionName": "Getting Started",
+    "categoryName": "Getting Started",
+    "articleTitle": "install-fundpop",
+    "slug": "install-fundpop",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 3180
+  },
+  {
+    "collectionName": "Getting Started",
+    "categoryName": "Getting Started",
+    "articleTitle": "creating-your-first-campaign",
+    "slug": "creating-your-first-campaign",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 10521
+  },
+  {
+    "collectionName": "Getting Started",
+    "categoryName": "Getting Started",
+    "articleTitle": "dashboard-overview",
+    "slug": "dashboard-overview",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 4564
+  },
+  {
+    "collectionName": "CUSTOMIZATIONS",
+    "categoryName": "CUSTOMIZATIONS",
+    "articleTitle": "fundpop-widget-templates",
+    "slug": "fundpop-widget-templates",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 4150
+  },
+  {
+    "collectionName": "CUSTOMIZATIONS",
+    "categoryName": "CUSTOMIZATIONS",
+    "articleTitle": "extended-widget-placement",
+    "slug": "extended-widget-placement",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2303
+  },
+  {
+    "collectionName": "CUSTOMIZATIONS",
+    "categoryName": "CUSTOMIZATIONS",
+    "articleTitle": "translation",
+    "slug": "translation",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 3296
+  },
+  {
+    "collectionName": "CUSTOMIZATIONS",
+    "categoryName": "CUSTOMIZATIONS",
+    "articleTitle": "widget-preview-drafts",
+    "slug": "widget-preview-drafts",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2071
+  },
+  {
+    "collectionName": "WIDGETS",
+    "categoryName": "WIDGETS",
+    "articleTitle": "main-widget",
+    "slug": "main-widget",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2494
+  },
+  {
+    "collectionName": "WIDGETS",
+    "categoryName": "WIDGETS",
+    "articleTitle": "reward-tiers-widget",
+    "slug": "reward-tiers-widget",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2375
+  },
+  {
+    "collectionName": "WIDGETS",
+    "categoryName": "WIDGETS",
+    "articleTitle": "product-card-progress-bar",
+    "slug": "product-card-progress-bar",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 3097
+  },
+  {
+    "collectionName": "WIDGETS",
+    "categoryName": "WIDGETS",
+    "articleTitle": "featured-campaign-widget",
+    "slug": "featured-campaign-widget",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1903
+  },
+  {
+    "collectionName": "WIDGETS",
+    "categoryName": "WIDGETS",
+    "articleTitle": "campaign-collection-widget",
+    "slug": "campaign-collection-widget",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1904
+  },
+  {
+    "collectionName": "CAMPAIGN MANAGEMENT",
+    "categoryName": "CAMPAIGN MANAGEMENT",
+    "articleTitle": "orders",
+    "slug": "orders",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 5606
+  },
+  {
+    "collectionName": "CAMPAIGN MANAGEMENT",
+    "categoryName": "CAMPAIGN MANAGEMENT",
+    "articleTitle": "campaign-analytics",
+    "slug": "campaign-analytics",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 3856
+  },
+  {
+    "collectionName": "CAMPAIGN MANAGEMENT",
+    "categoryName": "CAMPAIGN MANAGEMENT",
+    "articleTitle": "campaign-timing",
+    "slug": "campaign-timing",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2039
+  },
+  {
+    "collectionName": "ADVANCED FEATURES",
+    "categoryName": "ADVANCED FEATURES",
+    "articleTitle": "milestones",
+    "slug": "milestones",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 4227
+  },
+  {
+    "collectionName": "ADVANCED FEATURES",
+    "categoryName": "ADVANCED FEATURES",
+    "articleTitle": "reward-tiers",
+    "slug": "reward-tiers",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 9358
+  },
+  {
+    "collectionName": "FAQs",
+    "categoryName": "FAQs",
+    "articleTitle": "payments-and-fees",
+    "slug": "payments-and-fees",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2838
+  },
+  {
+    "collectionName": "FAQs",
+    "categoryName": "FAQs",
+    "articleTitle": "orders-and-statuses",
+    "slug": "orders-and-statuses",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 2271
+  },
+  {
+    "collectionName": "FAQs",
+    "categoryName": "FAQs",
+    "articleTitle": "selling-plan-recovery",
+    "slug": "selling-plan-recovery",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1701
+  },
+  {
+    "collectionName": "FAQs",
+    "categoryName": "FAQs",
+    "articleTitle": "theme-compatibility",
+    "slug": "theme-compatibility",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1456
+  },
+  {
+    "collectionName": "RESSOURCES",
+    "categoryName": "RESSOURCES",
+    "articleTitle": "contact-us",
+    "slug": "contact-us",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1285
+  },
+  {
+    "collectionName": "THEME INTEGRATION",
+    "categoryName": "THEME INTEGRATION",
+    "articleTitle": "page-templates",
+    "slug": "page-templates",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1518
+  },
+  {
+    "collectionName": "THEME INTEGRATION",
+    "categoryName": "THEME INTEGRATION",
+    "articleTitle": "compatibility-bypass",
+    "slug": "compatibility-bypass",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1527
+  },
+  {
+    "collectionName": "THEME INTEGRATION",
+    "categoryName": "THEME INTEGRATION",
+    "articleTitle": "theme-editor-preview",
+    "slug": "theme-editor-preview",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1456
+  },
+  {
+    "collectionName": "BEST PRACTICES",
+    "categoryName": "BEST PRACTICES",
+    "articleTitle": "variant-images",
+    "slug": "variant-images",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1149
+  },
+  {
+    "collectionName": "BEST PRACTICES",
+    "categoryName": "BEST PRACTICES",
+    "articleTitle": "auto-end-vs-manual",
+    "slug": "auto-end-vs-manual",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1309
+  },
+  {
+    "collectionName": "BEST PRACTICES",
+    "categoryName": "BEST PRACTICES",
+    "articleTitle": "collection-targeting",
+    "slug": "collection-targeting",
+    "hasId": false,
+    "action": "create",
+    "htmlLength": 1290
+  }
+]

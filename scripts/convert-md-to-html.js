@@ -136,7 +136,7 @@ function rehypeLinks({ linkMap, visit }) {
   };
 }
 
-async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages }) {
+async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages, fileMap }) {
   const {
     unified,
     remarkParse,
@@ -170,11 +170,11 @@ async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages }) {
   if (title) {
     rawHtml = rawHtml.replace(/<h1[^>]*>[\s\S]*?<\/h1>/i, '');
   }
-  const html = postProcessHtml(rawHtml, { assetBaseUrl, linkMap, baseDir: path.dirname(inputPath), embedImages });
+  const html = postProcessHtml(rawHtml, { assetBaseUrl, linkMap, baseDir: path.dirname(inputPath), embedImages, fileMap });
   return { html, title };
 }
 
-function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages }) {
+function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages, fileMap }) {
   let out = html;
   out = out.replace(/<blockquote>([\s\S]*?)<\/blockquote>/gi, (m, inner) => {
     // Supporte > [!TYPE]\n... (avec ou sans premier paragraphe)
@@ -222,18 +222,26 @@ function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages }) 
     return m;
   });
 
-  if (linkMap && Object.keys(linkMap).length) {
-    out = out.replace(/<a([^>]*?)\s+href="([^"]+?)"/gi, (m, pre, href) => {
-      const md = href.replace(/#.*$/, '').replace(/\.md$/i, '');
-      if (/\.md($|#)/i.test(href) && linkMap[md]) {
-        let final = linkMap[md];
-        const hash = href.match(/(#.*)$/);
-        if (hash) final += hash[1];
-        return `<a${pre} href="${final}"`;
+  // Réécriture des liens relatifs .md vers URLs Help Scout absolues à partir du mapping + snapshot
+  out = out.replace(/<a([^>]*?)\s+href="([^"]+?)"/gi, (m, pre, href) => {
+    // Laisser passer les liens absolus externes
+    if (/^(?:https?:)?\/\//i.test(href)) return m;
+    // Ne traiter que les liens .md (avec ou sans ancre)
+    if (!/\.md($|#)/i.test(href)) return m;
+    const parts = href.split('#');
+    const mdPathRaw = parts[0];
+    const hash = parts[1] ? '#' + parts[1] : '';
+    try {
+      const abs = require('path').resolve(baseDir || process.cwd(), mdPathRaw);
+      let rel = require('path').relative(process.cwd(), abs).split(require('path').sep).join('/');
+      if (!/\.md$/i.test(rel)) rel += '.md';
+      const finalUrl = fileMap && fileMap[rel];
+      if (finalUrl) {
+        return `<a${pre} href="${finalUrl}${hash}"`;
       }
-      return m;
-    });
-  }
+    } catch (_) {}
+    return m;
+  });
 
   return out;
 }
@@ -246,12 +254,51 @@ async function main() {
   }
   const outDir = path.join(process.cwd(), '.converted');
   fs.mkdirSync(outDir, { recursive: true });
+  // Construire la table fichier -> URL publique Help Scout
+  // 1) Charger mapping.yaml (file -> slug)
+  // 2) Charger snapshot articles.json (slug -> publicUrl)
+  // 3) fileMap: chemin relatif .md -> publicUrl absolue; fallback vers HELPSCOUT_BASE_URL/article/<slug>
   const linkMap = {};
+  const fileMap = {};
+  try {
+    const yaml = require('js-yaml');
+    const mappingPath = path.join(process.cwd(), '.mapping', 'mapping.yaml');
+    const mapping = fs.existsSync(mappingPath) ? yaml.load(fs.readFileSync(mappingPath, 'utf8')) : { collections: [] };
+    const arts = [];
+    for (const coll of mapping.collections || []) {
+      for (const cat of (coll.categories || [])) {
+        for (const art of (cat.articles || [])) {
+          arts.push({ file: art.file, slug: art.slug });
+        }
+      }
+    }
+    const snapshotPath = path.join(process.cwd(), '.snapshot', 'helpscout', 'articles.json');
+    const baseUrl = process.env.HELPSCOUT_BASE_URL || 'https://fundpop-crowdfunding.helpscoutdocs.com';
+    let slugToPublic = new Map();
+    if (fs.existsSync(snapshotPath)) {
+      try {
+        const wrap = JSON.parse(fs.readFileSync(snapshotPath, 'utf8')) || [];
+        for (const w of wrap) {
+          const a = w && w.article ? w.article : w;
+          if (a && a.slug && a.publicUrl) slugToPublic.set(String(a.slug), String(a.publicUrl));
+        }
+      } catch (_) {}
+    }
+    for (const a of arts) {
+      if (!a || !a.file || !a.slug) continue;
+      const rel = a.file.replace(/^\.\/?/, '');
+      const pub = slugToPublic.get(String(a.slug)) || `${baseUrl.replace(/\/$/, '')}/article/${encodeURIComponent(a.slug)}`;
+      fileMap[rel] = pub;
+      // Variante sans extension pour compat
+      const noext = rel.replace(/\.md$/i, '');
+      fileMap[noext] = pub;
+    }
+  } catch (_) {}
   const assetBaseUrl = process.env.ASSET_BASE_URL || '';
   const embedImages = process.env.EMBED_IMAGES === '1';
   for (const f of inFiles) {
     const abs = path.isAbsolute(f) ? f : path.join(process.cwd(), f);
-    const { html, title } = await convertFile(abs, { assetBaseUrl, linkMap, embedImages });
+    const { html, title } = await convertFile(abs, { assetBaseUrl, linkMap, embedImages, fileMap });
     const base = path.basename(f, path.extname(f));
     const outPath = path.join(outDir, base + '.html');
     fs.writeFileSync(outPath, html, 'utf8');

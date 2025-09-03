@@ -1,0 +1,20 @@
+[
+  {
+    "action": "update",
+    "id": "68667d74011f620cfed5e314",
+    "slug": "orders",
+    "title": "🛒 Orders",
+    "status": "notpublished"
+  },
+  {
+    "action": "error",
+    "file": "campaign-management/campaign-analytics.md",
+    "error": "{\"name\":[\"Article name is already in use: 📊 Campaign Analytics\"]}"
+  },
+  {
+    "action": "create",
+    "slug": "campaign-timing",
+    "title": "⏱️ Campaign Timing",
+    "status": "notpublished"
+  }
+]

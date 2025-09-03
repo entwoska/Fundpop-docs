@@ -1,0 +1,108 @@
+[
+  {
+    "section": "Introduction",
+    "slug": "readme",
+    "id": "68b078b6f5f1da300ae1e018",
+    "action": "update"
+  },
+  {
+    "section": "Introduction",
+    "slug": "key-features",
+    "id": "68b078b6e36e670b9c69ea67",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "install-fundpop",
+    "id": "682c96bd7394277eac2ed81e",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "creating-your-first-campaign",
+    "id": "682c9dc8cd77aa34f653ec66",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "dashboard-overview",
+    "id": "68518e0a56e3b6624274481f",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "fundpop-widget-templates",
+    "id": "68518f7ebc0aad57c9e1ae43",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "extended-widget-placement",
+    "id": "6852ce9c620fa12415625e96",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "translation",
+    "id": "6852d0ad56e3b66242744d6e",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "widget-preview-drafts",
+    "id": "68b0798d5a4f362a5b3605d2",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "error": "Catégorie Help Scout introuvable"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "orders",
+    "id": "68667d74011f620cfed5e314",
+    "action": "update"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "campaign-analytics",
+    "id": "68b079f662f5e455f39f3901",
+    "action": "update"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "campaign-timing",
+    "id": "68b0897b021adb4173f93931",
+    "action": "update"
+  },
+  {
+    "section": "ADVANCED FEATURES",
+    "slug": "milestones",
+    "id": "68667e63084b9f28f6fe3816",
+    "action": "update"
+  },
+  {
+    "section": "ADVANCED FEATURES",
+    "slug": "reward-tiers",
+    "id": "686687cb011f620cfed5e352",
+    "action": "update"
+  },
+  {
+    "section": "FAQs",
+    "error": "Catégorie Help Scout introuvable"
+  },
+  {
+    "section": "RESSOURCES",
+    "slug": "contact-us",
+    "id": "6866906315634856f83d1f43",
+    "action": "update"
+  },
+  {
+    "section": "THEME INTEGRATION",
+    "error": "Catégorie Help Scout introuvable"
+  },
+  {
+    "section": "BEST PRACTICES",
+    "error": "Catégorie Help Scout introuvable"
+  }
+]

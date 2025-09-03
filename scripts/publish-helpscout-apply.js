@@ -272,7 +272,8 @@ async function main() {
         const fromSummary = summaryTitles.get(file);
         const title = inferred || fromSummary || path.basename(file, path.extname(file));
         const slug = currentSlug || fileToSlug.get(file);
-        const body = { name: title, slug, text: html, status: 'published', collectionId, categoryId, siteId };
+        // Inclure collectionId pour permettre le déplacement inter-collection si nécessaire
+        const body = { name: title, slug, text: html, status: 'published', categories: [categoryId], collectionId, siteId };
         if (DEBUG_LOG) {
           console.log('PUT /articles/' + id, JSON.stringify(body).slice(0, 200) + '...');
         }
@@ -307,7 +308,8 @@ async function main() {
         if (s === slug || normalizeTitle(it.name) === normalizeTitle(title)) { globalMatch = it; break; }
       }
       if (!existingBySlug.get(slug) && !existingByTitle.get(normalizeTitle(title)) && globalMatch && globalMatch.id) {
-        const body = { name: title, slug, text: html, status: 'published', collectionId, categoryId, siteId };
+        // Inclure collectionId/siteId pour permettre le déplacement inter-collection
+        const body = { name: title, slug, text: html, status: 'published', categories: [categoryId], collectionId, siteId };
         await axiosInstance.put(`articles/${globalMatch.id}`, body);
         results.push({ action: 'update', id: globalMatch.id, slug, title, status: 'published' });
         continue;
@@ -320,7 +322,8 @@ async function main() {
       } else {
         const globalMatch = globalBySlug.get(slug) || globalByTitle.get(normalizeTitle(title));
         if (globalMatch && globalMatch.id) {
-          const body = { name: title, slug, text: html, status: 'published', collectionId, categoryId, siteId };
+          // Inclure collectionId/siteId pour permettre le déplacement inter-collection
+          const body = { name: title, slug, text: html, status: 'published', categories: [categoryId], collectionId, siteId };
           await axiosInstance.put(`articles/${globalMatch.id}`, body);
           res = { action: 'update', id: globalMatch.id, slug, title, status: 'published' };
         } else {

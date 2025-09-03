@@ -1,0 +1,23 @@
+[
+  {
+    "action": "update",
+    "id": "682c96bd7394277eac2ed81e",
+    "slug": "install-fundpop",
+    "title": "install-fundpop",
+    "status": "draft"
+  },
+  {
+    "action": "update",
+    "id": "682c9dc8cd77aa34f653ec66",
+    "slug": "creating-your-first-campaign",
+    "title": "creating-your-first-campaign",
+    "status": "draft"
+  },
+  {
+    "action": "update",
+    "id": "68518e0a56e3b6624274481f",
+    "slug": "dashboard-overview",
+    "title": "dashboard-overview",
+    "status": "draft"
+  }
+]

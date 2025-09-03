@@ -1,0 +1,181 @@
+[
+  {
+    "section": "Introduction",
+    "slug": "readme",
+    "id": "68b078b6f5f1da300ae1e018",
+    "action": "update"
+  },
+  {
+    "section": "Introduction",
+    "slug": "key-features",
+    "id": "682c938b5b07a90ce479dba3",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "install-fundpop",
+    "id": "682c96bd7394277eac2ed81e",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "creating-your-first-campaign",
+    "id": "682c9dc8cd77aa34f653ec66",
+    "action": "update"
+  },
+  {
+    "section": "Getting Started",
+    "slug": "dashboard-overview",
+    "id": "68518e0a56e3b6624274481f",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "fundpop-widget-templates",
+    "id": "68518f7ebc0aad57c9e1ae43",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "extended-widget-placement",
+    "id": "6852ce9c620fa12415625e96",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "translation",
+    "id": "6852d0ad56e3b66242744d6e",
+    "action": "update"
+  },
+  {
+    "section": "CUSTOMIZATIONS",
+    "slug": "widget-preview-drafts",
+    "id": "68b0798d5a4f362a5b3605d2",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "slug": "main-widget",
+    "id": "68b1bef4a00b8f11821d3c3b",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "slug": "reward-tiers-widget",
+    "id": "68b1bef5be6de50207e83453",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "slug": "product-card-progress-bar",
+    "id": "68b1bef9a00b8f11821d3c3c",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "slug": "featured-campaign-widget",
+    "id": "68b1befa76022c3f8b9eba4c",
+    "action": "update"
+  },
+  {
+    "section": "WIDGETS",
+    "slug": "campaign-collection-widget",
+    "id": "68b1befabe6de50207e83455",
+    "action": "update"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "orders",
+    "id": "68667d74011f620cfed5e314",
+    "action": "update"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "campaign-analytics",
+    "id": "68b079f662f5e455f39f3901",
+    "action": "update"
+  },
+  {
+    "section": "CAMPAIGN MANAGEMENT",
+    "slug": "campaign-timing",
+    "id": "68b0897b021adb4173f93931",
+    "action": "update"
+  },
+  {
+    "section": "ADVANCED FEATURES",
+    "slug": "milestones",
+    "id": "68667e63084b9f28f6fe3816",
+    "action": "update"
+  },
+  {
+    "section": "ADVANCED FEATURES",
+    "slug": "reward-tiers",
+    "id": "686687cb011f620cfed5e352",
+    "action": "update"
+  },
+  {
+    "section": "FAQs",
+    "slug": "payments-and-fees",
+    "id": "68668f5a011f620cfed5e38f",
+    "action": "update"
+  },
+  {
+    "section": "FAQs",
+    "slug": "orders-and-statuses",
+    "id": "68668feb414c086028536a00",
+    "action": "update"
+  },
+  {
+    "section": "FAQs",
+    "slug": "selling-plan-recovery",
+    "id": "68b1c0853c43f010de4b9f17",
+    "action": "update"
+  },
+  {
+    "section": "FAQs",
+    "file": "faqs/theme-compatibility.md",
+    "error": "{\"categories\":[\"Category id is not valid: 68b1c3db27acf320d37459ac\"]}"
+  },
+  {
+    "section": "RESSOURCES",
+    "slug": "contact-us",
+    "id": "6866906315634856f83d1f43",
+    "action": "update"
+  },
+  {
+    "section": "THEME INTEGRATION",
+    "slug": "page-templates",
+    "id": "68b1c08ebe6de50207e83463",
+    "action": "update"
+  },
+  {
+    "section": "THEME INTEGRATION",
+    "slug": "compatibility-bypass",
+    "id": "68b1c09007881e00fb3d0ebc",
+    "action": "update"
+  },
+  {
+    "section": "THEME INTEGRATION",
+    "slug": "theme-editor-preview",
+    "id": "68b1c09207881e00fb3d0ebd",
+    "action": "update"
+  },
+  {
+    "section": "BEST PRACTICES",
+    "slug": "variant-images",
+    "id": "68b1c094be6de50207e83464",
+    "action": "update"
+  },
+  {
+    "section": "BEST PRACTICES",
+    "slug": "auto-end-vs-manual",
+    "id": "68b1c0963c43f010de4b9f18",
+    "action": "update"
+  },
+  {
+    "section": "BEST PRACTICES",
+    "slug": "collection-targeting",
+    "id": "68b1c0973c43f010de4b9f19",
+    "action": "update"
+  }
+]
