@@ -54,3 +54,6 @@ If you're using an Online Store 1.0 / Vintage theme, contact our team for custom
 * Via in-app chat
 * Email: [support@fizzy.studio](mailto:support@fizzy.studio)
 
+> [!TIP]
+> See also: [Main Widget](../widgets/main-widget.md) — overview of the standard Fundpop widget (layout, props, best practices).
+

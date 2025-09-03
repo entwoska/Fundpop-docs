@@ -122,3 +122,57 @@ This option will be visible for saved campaigns only
 {% hint style="success" %}
 Pro tip: Create 3-4 tiers with distinct value propositions to appeal to different backer budgets and commitment levels.
 {% endhint %}
+
+### Variant-Specific Images
+
+Help backers choose exactly what they want by showing the correct image for each product variant included in a tier.
+
+1. When adding products to your tier, select a product with variants (e.g., color, size)
+2. For each variant, upload or map the specific image you want to display
+3. Preview the tier to confirm the right image appears when variants change
+
+<figure><img src="/.gitbook/assets/advanced-features-reward-tiers--variant-images-mapping-ui--v20250903.png" alt="Variant images mapping UI within the Reward Tier editor"><figcaption><p>Variant images mapping UI within the Reward Tier editor</p></figcaption></figure>
+
+### Display Layouts: Grid or List
+
+Choose the layout that best fits your theme and content density. You can also adjust alignment for a balanced look.
+
+* Grid: Compact card layout, ideal for multiple tiers side-by-side
+
+* List: Spacious vertical layout with larger descriptions
+
+* Alignment: Control content alignment (left, center) per layout
+
+How to configure:
+
+1. Open your Reward Tier settings
+2. Select Grid or List layout
+3. Adjust alignment to match your store aesthetic
+
+<figure><img src="/.gitbook/assets/advanced-features-reward-tiers--layout-selector-grid-list-alignment--v20250903.png" alt="Layout selector showing Grid/List with alignment options"><figcaption><p>Layout selector showing Grid/List with alignment options</p></figcaption></figure>
+
+### Translations for Reward Tiers
+
+All customer-facing text for Reward Tiers supports translations. Translate tier names, descriptions, and bundle information so international customers read content in their language.
+
+Steps:
+
+1. Go to Settings → Translation
+2. Locate the Reward Tiers section
+3. Enter translations for each text field
+
+See also: [Translation](../customizations/translation.md)
+
+<figure><img src="/.gitbook/assets/advanced-features-reward-tiers--translation-settings-reward-tiers--v20250903.png" alt="Translation settings filtered on Reward Tiers keys"><figcaption><p>Translation settings filtered on Reward Tiers keys</p></figcaption></figure>
+
+### Premium Add-to-Cart Experience
+
+When a backer adds a Reward Tier to cart, a modern cart modal appears with a smooth ~0.8s fade-in animation. This provides a polished, consistent shopping experience.
+
+Notes:
+
+* Works automatically when adding tier items to cart
+* No configuration required
+* Compatible with both Grid and List tier layouts
+
+<figure><img src="/.gitbook/assets/advanced-features-reward-tiers--cart-modal-overlay-after-add--v20250903.png" alt="Cart modal overlay shown after adding a Reward Tier"><figcaption><p>Cart modal overlay shown after adding a Reward Tier</p></figcaption></figure>

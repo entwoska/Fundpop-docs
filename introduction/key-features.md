@@ -17,15 +17,16 @@ description: >-
 
 * Brand-matched campaign widgets
 * Customizable templates
-* Multi-language support
+* Multi-language support (including Reward Tiers text)
 * Homepage campaign featuring
 * Collection view progress display
-* Flexible widget placement options
+* Flexible widget placement options, including collection-specific targeting
 
 #### Backer Engagement
 
 * Milestone rewards to drive participation
 * Tiered reward bundles
+* Variant-specific images for tiers
 * Early-bird specials
 * Automated reward distribution
 
@@ -33,7 +34,8 @@ description: >-
 
 * Secure pre-order handling
 * Optional pledge fees
-* Manual payment capture control
+* Manual or automatic payment capture control
+* Auto-end on goal for pre-order campaigns
 * Seamless Shopify integration
 
 ### Use Cases

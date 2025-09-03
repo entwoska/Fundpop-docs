@@ -34,6 +34,15 @@ The Fundpop widget is what displays your campaign's progress on your store:
 
 <figure><img src="../.gitbook/assets/FP-campaign-3.png" alt=""><figcaption><p>Widget section showing template selection and preview</p></figcaption></figure>
 
+> [!TIP]
+> See also: [Main Widget](../widgets/main-widget.md) — full overview of the standard widget (layout, props, variants) and best practices.
+
+4. Collections Targeting (optional):
+
+* Limit widget display to specific product collections for precise targeting
+* Configure this later in [Extended Widget Placement](../customizations/extended-widget-placement.md)
+* Useful for category-specific campaigns
+
 3. Homepage Feature Option:
 
 {% hint style="info" %}
@@ -105,6 +114,10 @@ Configure your campaign timeline:
    * Enter specific number of days
    * Review exact start and end dates/times
 
+3. Adjust later if needed:
+   * You can extend the end date of an active pre-order campaign when momentum grows
+   * Edit your campaign → change end date → save changes
+
 <figure><img src="../.gitbook/assets/FP-campaign-6.png" alt=""><figcaption><p> Duration section with calendar and slider</p></figcaption></figure>
 
 ### Step 6: Order Options
@@ -131,6 +144,20 @@ For pre-order campaigns, you can set:
 * For all-or-nothing campaigns, pledge fees are refunded if the campaign fail
 
 The pre-order selling plan name helps customers identify their purchase as a pre-order during checkout. For example, you might enter **Pre-order - Ships January 2026** or **Early Bird Special**.
+
+#### Auto-End on Goal Achievement (optional)
+
+End pre-order campaigns automatically when the funding goal is reached to prevent overselling and simplify operations.
+
+How to enable:
+
+1. In Order Options, enable "Auto-end on goal"
+2. Save your campaign
+
+Effect:
+
+* When your goal is reached, the campaign ends automatically
+* Customers won’t be able to place new pre-orders after auto-end
 
 {% hint style="info" %}
 #### Automatic Payment Processing

@@ -1,0 +1,90 @@
+ Here's a structured list of new features for the GitBook user guide documentation:
+  :gift: Reward Tiers Features
+  1. Enhanced Product Variant Display
+  - What's New: Each product variant (size, color, etc.) can now display its own
+  specific image
+  - User Benefit: Customers see exactly what they're selecting, reducing confusion
+  and returns
+  - How to Use: Upload variant-specific images when creating reward tiers
+  2. Premium Shopping Cart Experience
+  - What's New: Beautiful modal with smooth 0.8s fade-in animation when adding items
+  to cart
+  - User Benefit: More engaging and professional shopping experience
+  - How to Use: Automatically activated when customers add reward tier items
+  3. Flexible Display Options
+  - What's New: Choose between grid or list layouts with customizable alignment
+  - User Benefit: Match your store's aesthetic and optimize for different screen
+  sizes
+  - How to Use: Select layout preferences in reward tier settings
+  4. Multi-Language Support
+  - What's New: Complete translation support for all reward tier text
+  - User Benefit: Serve international customers in their native language
+  - How to Use: Configure translations in the app settings
+  ---
+  :alarm_clock: Pre-Order Campaign Enhancements
+  1. Campaign Duration Extension
+  - What's New: Extend the end date of active pre-order campaigns
+  - User Benefit: React to campaign momentum without creating new campaigns
+  - How to Use: Edit campaign → Change end date → Save changes
+  2. Automatic Selling Plan Recovery
+  - What's New: System automatically recreates Shopify selling plans if accidentally
+  deleted
+  - User Benefit: Prevents campaign disruption from accidental deletions
+  - How it Works: Automatic - no action required
+  3. Auto-End on Goal Achievement
+  - What's New: Campaigns can automatically end when funding goal is reached
+  - User Benefit: Prevent overselling and manage inventory efficiently
+  - How to Use: Enable "Auto-end on goal" option when creating campaign
+  ---
+  :wrench: Widget & Display Improvements
+  1. Collection-Specific Widgets
+  - What's New: Display widgets only on specific product collections
+  - User Benefit: Targeted campaign promotion for relevant products
+  - How to Use: Select collections in widget settings
+  2. Enhanced Animations
+  - What's New: Smooth progress bars and staggered milestone animations
+  - User Benefit: More engaging and professional appearance
+  - How it Works: Automatically applied to all widgets
+  3. Draft Campaign Testing
+  - What's New: Preview how featured widgets look with draft campaigns
+  - User Benefit: Test everything before going live
+  - How to Use: Create draft campaign → Enable preview mode → Test widget
+  4. Performance Optimization
+  - What's New: Client-side caching with localStorage
+  - User Benefit: Faster page loads and reduced API calls
+  - How it Works: Automatic - improves performance behind the scenes
+  ---
+  :art: Theme Integration Features
+  1. Page Template Support
+  - What's New: Add campaign blocks to any Shopify page template
+  - User Benefit: Create dedicated campaign landing pages
+  - How to Use: Theme Editor → Pages → Add app block
+  2. Theme Compatibility Override
+  - What's New: Bypass theme compatibility checks when needed
+  - User Benefit: Use app with any theme, even unsupported ones
+  - How to Use: Settings → Advanced → Enable compatibility bypass
+  3. Theme Editor Preview
+  - What's New: See reward tiers and blocks in theme editor for pending campaigns
+  - User Benefit: Perfect your design before campaign launch
+  - How to Use: Open theme editor while campaign is pending
+  ---
+  :memo: Documentation Sections to Update
+  1. Getting Started Guide
+    - Add section on variant image setup
+    - Include translation configuration steps
+  2. Campaign Management
+    - Update with campaign extension instructions
+    - Add auto-end feature documentation
+  3. Widget Configuration
+    - New collection targeting section
+    - Draft campaign testing guide
+  4. Theme Integration
+    - Page template setup guide
+    - Compatibility bypass warnings and instructions
+  5. Troubleshooting
+    - What to do if selling plan is deleted
+    - How to resolve theme compatibility issues
+  6. Best Practices
+    - Optimizing variant images for load speed
+    - When to use auto-end vs manual campaign ending
+    - Collection-specific widget strategies

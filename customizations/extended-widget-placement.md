@@ -16,16 +16,28 @@ To pin a campaign to your homepage:
 
 Note: Only one campaign can be pinned at a time; pinning a new campaign will replace any previously pinned campaign.
 
-### Product Card Integration
+### Product Card Progress Bar (recommended)
 
-With custom development support from our team, you can display campaign progress directly in collection views, or anywhere a product card from your campaigns appear:
+Display progress directly under product cards in collections using the dedicated widget.
 
-* Show progress bars under product cards in collection listings or homepage
-* Increase campaign visibility as customers browse your store
-* Create urgency and interest before customers even reach the product page
+* Use the [Product Card Progress Bar](../widgets/product-card-progress-bar.md) widget for a maintainable integration
+* Customize colors/sizes in the theme editor
+* Avoids the need for custom integration
 
-<figure><img src="../.gitbook/assets/image (5).png" alt=""><figcaption><p>Extend campaign visibility by displaying progress directly in collection views. Fully customizable with color, size, and radius options to match your brand.</p></figcaption></figure>
+### Collection-Specific Widgets
 
-{% hint style="info" %}
-This integration requires custom code implementation. Contact our development team at [support@fizzy.studio](mailto:support@fizzy.studio) or on our in-app chat to enable collection view integration for your store.
-{% endhint %}
+Target campaign widgets to only appear on selected product collections for more relevant promotion and a cleaner store experience.
+
+How to set it up:
+
+1. Open your campaign's widget settings
+2. Find the Collections targeting section
+3. Select one or more collections where the widget should appear
+4. Save your changes
+
+Behavior:
+
+* The widget will be rendered only on product pages within the selected collections
+* If no collection is selected, the widget follows your normal placement rules
+
+<figure><img src="/.gitbook/assets/customizations-extended-widget-placement--widget-settings-collections-multiselect--v20250903.png" alt="Widget settings showing a multi-select input for Collections"><figcaption><p>Widget settings showing a multi-select input for Collections</p></figcaption></figure>
