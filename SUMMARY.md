@@ -56,6 +56,6 @@
 
 ## BEST PRACTICES
 
-* [🖼️ Optimizing Variant Images](best-practices/variant-images.md)
+* [🎯 Reward Tier Visual Best Practices](best-practices/variant-images.md)
 * [⚖️ Auto-End vs Manual Ending](best-practices/auto-end-vs-manual.md)
 * [🧭 Collection Targeting Strategies](best-practices/collection-targeting.md)

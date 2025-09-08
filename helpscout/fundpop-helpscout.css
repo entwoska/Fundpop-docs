@@ -1,0 +1,441 @@
+/*
+  Fundpop — Help Scout Custom Stylesheet
+  Basé sur les idées de branding décrites par HR Partner.
+  Polices: Nunito (titres), IBM Plex Sans (texte)
+  Couleurs: issues de la config Tailwind du site Fundpop
+
+  Comment utiliser:
+  - Téléversez ce fichier dans Help Scout: Manage → Docs → [Votre bibliothèque] → Custom Code → Custom CSS
+  - Remplacez les IDs d’exemples (#category-101, etc.) par les IDs de vos catégories Help Scout
+  - Hébergez les icônes SVG sur un CDN (ex: GitHub Pages, S3) et mettez à jour les URLs ci-dessous
+
+  Astuce: Pour récupérer l’ID d’une catégorie, ouvrez sa page publique et lisez l’URL (ex: 150-nom-de-categorie → ID = 150).
+
+  Référence: "Setting up our Help Scout branding" (Devan Sabaratnam / HR Partner)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+
+/* =============================
+   Variables de thème Fundpop
+   ============================= */
+:root {
+    /* Polices */
+    --fp-font-heading: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --fp-font-body: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+
+    /* Primary (Mulled Wine) */
+    --fp-primary-50:  #f5f3f7;
+    --fp-primary-100: #e9e4ee;
+    --fp-primary-200: #d8cee2;
+    --fp-primary-300: #bfadcf;
+    --fp-primary-400: #a388b9;
+    --fp-primary-500: #8c69a3;
+    --fp-primary-600: #5a436a; /* Principale */
+    --fp-primary-700: #4b3759;
+    --fp-primary-800: #41304c;
+    --fp-primary-900: #3a2b42;
+    --fp-primary-950: #231828;
+
+    /* Secondary (Tobacco Brown) */
+    --fp-secondary-50:  #f7f6f2;
+    --fp-secondary-100: #efeade;
+    --fp-secondary-200: #ded5c2;
+    --fp-secondary-300: #cab69d;
+    --fp-secondary-400: #b79a7a;
+    --fp-secondary-500: #a68663;
+    --fp-secondary-600: #6a5e42; /* Accents */
+    --fp-secondary-700: #5a4e38;
+    --fp-secondary-800: #4c4230;
+    --fp-secondary-900: #40372a;
+    --fp-secondary-950: #251f17;
+
+    /* Dark (Mine Shaft) */
+    --fp-dark-50:  #f6f6f6;
+    --fp-dark-100: #e7e7e7;
+    --fp-dark-200: #d1d1d1;
+    --fp-dark-300: #b0b0b0;
+    --fp-dark-400: #888888;
+    --fp-dark-500: #6d6d6d;
+    --fp-dark-600: #5d5d5d;
+    --fp-dark-700: #4f4f4f;
+    --fp-dark-800: #454545;
+    --fp-dark-900: #3b3b3b;
+    --fp-dark-950: #232323;
+
+    /* Neutral */
+    --fp-neutral-50:  #f9f9f9;
+    --fp-neutral-100: #f0f0f0;
+    --fp-neutral-200: #e4e4e4;
+    --fp-neutral-300: #d1d1d1;
+    --fp-neutral-400: #b4b4b4;
+    --fp-neutral-500: #9a9a9a;
+    --fp-neutral-600: #818181;
+    --fp-neutral-700: #6a6a6a;
+    --fp-neutral-800: #5a5a5a;
+    --fp-neutral-900: #4e4e4e;
+    --fp-neutral-950: #282828;
+
+    /* Rayons et ombres */
+    --fp-radius-lg: 16px;  /* ~2xl */
+    --fp-radius-md: 12px;  /* ~xl */
+    --fp-radius-sm: 8px;
+
+    --fp-shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
+    --fp-shadow-md: 0 6px 18px rgba(35, 24, 40, 0.12);
+    --fp-shadow-lg: 0 10px 30px rgba(35, 24, 40, 0.16);
+}
+
+/* =============================
+   Base & Typographie
+   ============================= */
+html, body {
+    background: var(--fp-neutral-50);
+    color: var(--fp-dark-900);
+    font-family: var(--fp-font-body);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    color: var(--fp-primary-600);
+}
+a:hover, a:focus {
+    color: var(--fp-primary-500);
+}
+
+/* =============================
+   En-tête / Navigation Help Scout
+   ============================= */
+.navbar .navbar-inner {
+    height: 64px;
+    background: #fff;
+    border-bottom: 1px solid var(--fp-neutral-200);
+}
+
+.navbar .navbar-inner .container-fluid {
+    height: 64px;
+    padding: 0 16px;
+}
+
+.navbar .brand {
+    padding: 0;
+    margin-left: 0;
+}
+
+a.brand > img {
+    height: 56px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.navbar .nav li {
+    display: inline-block;
+    float: none;
+    font-family: var(--fp-font-heading);
+    font-weight: 600;
+    letter-spacing: .02em;
+}
+
+.navbar .nav li a, .navbar .icon-private-w {
+    font-size: 14px;
+    color: var(--fp-dark-700);
+}
+.navbar .nav li a:hover {
+    color: var(--fp-primary-600);
+}
+
+/* =============================
+   Barre de recherche d’accueil
+   ============================= */
+#docsSearch {
+    background: #fff;
+    border-top: 1px solid var(--fp-neutral-200);
+    border-bottom: 1px solid var(--fp-neutral-200);
+    padding: 24px 0 28px;
+    margin-bottom: 2.5em;
+}
+
+#docsSearch h1 {
+    margin: .4em 0 .25em;
+    padding: 8px 0;
+    text-align: center;
+    font-family: var(--fp-font-heading);
+    font-weight: 700;
+    font-size: 32px;
+    color: var(--fp-primary-600);
+}
+
+input.search-query {
+    border-radius: 999px;
+    border: 1px solid var(--fp-neutral-300);
+    padding: 12px 18px;
+    font-family: var(--fp-font-body);
+    font-weight: 400;
+    letter-spacing: .01em;
+}
+
+/* =============================
+   Listes de catégories (Accueil)
+   ============================= */
+.category-list {
+    text-align: center;
+}
+
+section.category-list .category {
+    position: relative;
+    box-sizing: border-box;
+    width: 31.6%;
+    margin: 0 1% 20px;
+    padding: 120px 20px 18px;
+    background: #fff;
+    border: 1px solid var(--fp-neutral-200);
+    border-radius: var(--fp-radius-lg);
+    box-shadow: var(--fp-shadow-sm);
+    transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+
+section.category-list .category:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--fp-shadow-md);
+    border-color: var(--fp-primary-200);
+}
+
+/* Icône en haut des cartes catégories */
+section.category-list .category::before {
+    content: "";
+    position: absolute;
+    top: 16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 96px;
+    height: 96px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    border-radius: 20px;
+    box-shadow: 0 6px 16px rgba(90, 67, 106, 0.12);
+    background-color: var(--fp-primary-50);
+}
+
+.category-list h3 {
+    margin-top: 0;
+    font-family: var(--fp-font-heading);
+    font-weight: 700;
+    font-size: 20px;
+    color: var(--fp-primary-600);
+}
+
+.category-list ul.article-list a {
+    color: var(--fp-dark-700);
+}
+.category-list ul.article-list a:hover {
+    color: var(--fp-primary-600);
+}
+
+/* =============================
+   Sidebar des articles
+   ============================= */
+#sidebar h3 {
+    text-transform: uppercase;
+    font-family: var(--fp-font-heading);
+    letter-spacing: .12em;
+    font-weight: 700;
+    font-size: 14px;
+    color: var(--fp-neutral-700);
+    margin-bottom: 6px;
+}
+
+#sidebar .nav-list a {
+    display: inline-block;
+    color: var(--fp-primary-700);
+    font-size: 14px;
+    padding: 6px 12px 6px 0;
+    line-height: 20px;
+    font-family: var(--fp-font-body);
+}
+
+#sidebar .nav-list .active a,
+#sidebar .nav-list .active a:hover,
+#sidebar .nav-list .active a:focus {
+    font-weight: 600;
+    color: var(--fp-primary-600);
+    background: none;
+    text-decoration: underline;
+}
+
+/* =============================
+   Zone de contenu / Articles
+   ============================= */
+#main-content {
+    background: none;
+    float: right;
+    margin-bottom: 2em;
+    padding: 32px 0 0 28px;
+}
+
+#fullArticle .title,
+.contentWrapper h1 {
+    margin: 0 30px .5em 0;
+    font-family: var(--fp-font-heading);
+    color: var(--fp-primary-600);
+    font-weight: 800;
+}
+
+#fullArticle, #fullArticle p, #fullArticle ul, #fullArticle ol, #fullArticle li,
+#fullArticle div, #fullArticle blockquote, #fullArticle dd, #fullArticle table {
+    color: var(--fp-dark-800);
+    font-family: var(--fp-font-body);
+    font-size: 16px;
+    font-weight: 400;
+    letter-spacing: .01em;
+}
+
+#fullArticle strong { color: var(--fp-dark-900); }
+
+#fullArticle h2 {
+    font-size: 24px;
+    font-family: var(--fp-font-heading);
+    font-weight: 700;
+    color: var(--fp-primary-600);
+}
+
+#fullArticle h3 {
+    font-size: 20px;
+    font-family: var(--fp-font-heading);
+    font-weight: 700;
+    color: var(--fp-primary-600);
+}
+
+#fullArticle h4 {
+    font-size: 16px;
+    font-family: var(--fp-font-heading);
+    font-weight: 600;
+    color: var(--fp-neutral-700);
+}
+
+.contentWrapper p {
+    margin-top: -4px;
+    word-wrap: break-word;
+    color: var(--fp-dark-800);
+    font-family: var(--fp-font-body);
+    font-size: 16px;
+    letter-spacing: .01em;
+}
+
+#fullArticle img {
+    display: block;
+    margin: 1em 0 2em;
+    padding: 4px;
+    border-radius: var(--fp-radius-sm);
+    box-sizing: border-box;
+    border: 1px solid var(--fp-neutral-200);
+}
+
+.articleFoot p,
+.articleFoot time {
+    color: var(--fp-neutral-700);
+    font-family: var(--fp-font-body);
+    font-weight: 400;
+    font-style: italic;
+}
+
+footer p a {
+    color: var(--fp-neutral-700);
+}
+
+/* =============================
+   Boutons / Contrôles
+   ============================= */
+.btn {
+    color: #fff;
+    background: var(--fp-primary-600);
+    border-radius: var(--fp-radius-sm);
+    border: 1px solid var(--fp-primary-700);
+    font-size: 14px;
+    padding: .6em 1em;
+    box-shadow: var(--fp-shadow-sm);
+}
+
+.btn:hover, .btn:focus, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+    color: #fff;
+    background: var(--fp-primary-500);
+    border-color: var(--fp-primary-600);
+}
+
+#search-query .btn:hover {
+    color: #fff;
+    background: var(--fp-primary-500);
+    border-radius: var(--fp-radius-sm);
+    border: 1px solid var(--fp-primary-600);
+    font-size: 16px;
+    padding: 0 1.25em;
+    height: 48px;
+}
+
+/* =============================
+   Catégories → Icônes par ID
+   Remplacez les IDs et URLs par vos valeurs
+   ============================= */
+/* Exemple de mapping (à adapter):
+   - Getting Started → #category-101 → getting-started.svg
+   - Mon compte      → #category-102 → account.svg
+   - Facturation     → #category-103 → billing.svg
+   - Intégrations    → #category-104 → integrations.svg
+   - Dépannage       → #category-105 → troubleshooting.svg
+   - FAQ             → #category-106 → faq.svg
+
+   Hébergez les SVG sur un domaine public et utilisez la version HTTPS des URLs ci-dessous.
+*/
+
+/* Getting Started */
+#category-101.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/getting-started.svg');
+}
+
+/* Mon compte */
+#category-102.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/account.svg');
+}
+
+/* Facturation */
+#category-103.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/billing.svg');
+}
+
+/* Intégrations */
+#category-104.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/integrations.svg');
+}
+
+/* Dépannage */
+#category-105.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/troubleshooting.svg');
+}
+
+/* FAQ */
+#category-106.category::before {
+    background-image: url('https://example-cdn.fundpop.com/helpscout-icons/faq.svg');
+}
+
+/* =============================
+   Responsive
+   ============================= */
+@media screen and (max-width: 1105px) {
+    section.category-list .category { width: 48.2%; }
+}
+
+@media screen and (max-width: 760px) {
+    section.category-list .category {
+        width: 100%;
+        margin: 0 0 20px;
+        padding: 110px 16px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    #fullArticle .title, .contentWrapper h1 { font-size: 24px; }
+    #fullArticle h2 { font-size: 20px; }
+}
+
+

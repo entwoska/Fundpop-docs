@@ -103,15 +103,27 @@ function rehypeHints({ visit }) {
 }
 
 function rehypeImages({ baseDir, assetBaseUrl, visit }) {
+  const pathMod = require('path');
+  const fsMod = require('fs');
   return (tree) => {
     visit(tree, 'element', (node) => {
       if (node.tagName === 'img' && node.properties && node.properties.src) {
-        const src = node.properties.src;
-        if (!/^https?:\/\//i.test(src)) {
-          const normalized = src.replace(/^\.\//, '');
-          node.properties.src = assetBaseUrl
-            ? `${assetBaseUrl.replace(/\/$/, '')}/${normalized}`
-            : normalized;
+        const originalSrc = String(node.properties.src || '');
+        if (!/^https?:\/\//i.test(originalSrc)) {
+          const isRootRelative = originalSrc.startsWith('/');
+          const cleaned = originalSrc.replace(/^\.\//, '').replace(/^\//, '');
+          // Résoudre le chemin absolu fichier: racine du repo si root-relative, sinon relatif au fichier courant
+          const abs = isRootRelative
+            ? pathMod.resolve(process.cwd(), cleaned)
+            : pathMod.resolve(baseDir || process.cwd(), cleaned);
+          let rel = pathMod.relative(process.cwd(), abs).split(pathMod.sep).join('/');
+          rel = rel.replace(/^\.\//, '');
+          // Si un ASSET_BASE_URL est fourni, émettre une URL absolue; sinon garder le chemin relatif propre
+          if (assetBaseUrl) {
+            node.properties.src = `${assetBaseUrl.replace(/\/$/, '')}/${encodeURI(rel)}`;
+          } else {
+            node.properties.src = rel;
+          }
         }
         node.properties.alt = node.properties.alt || '';
         node.properties.style = (node.properties.style || '') + ';max-width:100%;height:auto;';
@@ -198,10 +210,11 @@ function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages, fi
   });
 
   out = out.replace(/<img([^>]*?)\s+src="(?!https?:|data:)([^"]+)"/gi, (m, pre, src) => {
+    const isRootRelative = /^\//.test(src);
     const cleaned = src.replace(/^\.\//, '').replace(/^\//, '');
     if (embedImages && baseDir) {
       try {
-        const abs = require('path').resolve(baseDir, cleaned);
+        const abs = require('path').resolve(isRootRelative ? process.cwd() : baseDir, cleaned);
         if (require('fs').existsSync(abs)) {
           const buf = require('fs').readFileSync(abs);
           const ext = (abs.split('.').pop() || '').toLowerCase();
@@ -213,7 +226,7 @@ function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages, fi
     }
     if (assetBaseUrl) {
       const pathMod = require('path');
-      const abs = pathMod.resolve(baseDir || process.cwd(), cleaned);
+      const abs = pathMod.resolve(isRootRelative ? process.cwd() : (baseDir || process.cwd()), cleaned);
       let rel = pathMod.relative(process.cwd(), abs).split(pathMod.sep).join('/');
       rel = rel.replace(/^\.\//, '');
       const pref = assetBaseUrl.replace(/\/$/, '') + '/' + encodeURI(rel);
