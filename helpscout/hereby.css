@@ -1205,3 +1205,9 @@ body {
 #collection-category-308, #support-center {
     display: none;
 }
+
+/* TEST: Introduction (ID réel 15) → image depuis GitHub (dossier helpscout/tiles) */
+#category-15 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%201.png);
+}

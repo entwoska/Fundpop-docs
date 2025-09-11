@@ -431,7 +431,19 @@ section.category-list .category:hover {
 }
 
 /* Illustration en coin bas droit (image définie plus bas par ID) */
-section.category-list .category::before { content: none; }
+section.category-list .category::before {
+    content: "";
+    position: absolute;
+    right: -6px;
+    bottom: -6px;
+    width: 140px;
+    height: 140px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: .95;
+    pointer-events: none;
+}
 
 .category-list h3 {
     margin-top: 0;
@@ -714,6 +726,11 @@ footer p a {
 /* Getting Started */
 #category-101.category::before {
     background-image: url('https://example-cdn.fundpop.com/helpscout-icons/getting-started.svg');
+}
+
+/* TEST: Introduction (ID réel 15) → image depuis GitHub (dossier helpscout/tiles) */
+#category-15.category::before {
+    background-image: url('https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%201.png');
 }
 
 /* Mon compte */
