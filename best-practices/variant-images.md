@@ -1,27 +1,24 @@
 ---
 description: >
-  Visual best practices for Reward Tiers: images, layout, content, and optimization to drive conversion.
+  Best practices for Reward Tiers: strategy, imagery, content, pricing, and optimization to drive conversion.
 ---
 
-# 🎯 Reward Tier Visual Best Practices
+# 🎯 Reward Tier Best Practices
 
-Creating compelling reward tiers isn’t just about pricing — it’s visual storytelling that nudges backers toward higher‑value contributions. Use these practices to improve clarity, performance, and conversion.
+Creating compelling reward tiers isn’t just about pricing — it’s a holistic experience (offer design, storytelling, visuals, pricing, scarcity) that nudges backers toward higher‑value contributions. Use these practices to improve clarity, performance, and conversion.
 
-<figure><img src="/.gitbook/assets/best-practices-variant-images--variant-images-switching-preview--v20250903.png" alt="Fundpop Reward Tiers preview"><figcaption><p>Fundpop Reward Tiers preview</p></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/best-practices-variant-images--variant-images-switching-preview--v20250903.png" alt="Fundpop Reward Tiers preview"><figcaption><p>Fundpop Reward Tiers preview - Taken from Ben Thouard’s “Aqua Obscura” (Hemeria)</p></figcaption></figure>
 
-## Case Study: Ben Thouard’s “Aqua Obscura” (Hemeria)
+## Common Best Practices
 
-This underwater photography campaign showcases excellent reward tier design:
+For illustration only, the following points highlight common best practices observed across successful campaigns:
 
-### What They Did Right
+### What Stands Out
 
 **Clear Value Progression**
-- Entry Level: Book - Preorder Discount (€55)
-- Mid‑Tier: Signed Edition (€75)
-- Premium: Aqua Obscura + Turbulences (€110)
-- Exclusive: Limited Edition of 200 + Fine Art (€250)
+- Entry level → Enhanced → Bundle → Exclusive
 
-**Visual Consistency**
+**Consistency**
 - Consistent aspect ratios across all reward images
 - Unified deep‑blue color palette reinforcing brand identity
 - Clean, minimalist product presentation
@@ -31,18 +28,18 @@ This underwater photography campaign showcases excellent reward tier design:
 - Limited edition messaging creates urgency
 - Fine art inclusion justifies premium pricing
 
-## Visual Design Principles
+## Design Principles
 
 ### Image Optimization
 
 **Aspect Ratios**
 - Use consistent dimensions across all reward tier images
-- Square (1:1) for product showcases; 4:3 or 16:9 for lifestyle/context
+- Square (`1:1`) for product showcases; `4:3` or `16:9` for lifestyle/context
 
 **Quality Standards**
 - Compress images to <300KB while maintaining crispness
 - Ensure images look sharp on both mobile and desktop
-- Favor high‑contrast visuals that stand out against your theme background
+- Favor high‑contrast images that stand out against your theme background
 
 **Variant Representation**
 - Show clear differences between tiers/variants
@@ -52,15 +49,20 @@ This underwater photography campaign showcases excellent reward tier design:
 ### Layout Strategy
 
 **Progressive Value Display**
-```
-Entry → Enhanced → Bundle → Exclusive
-€X    → €X+36%  → €X+100% → €X+355%
-```
 
-**Visual Hierarchy**
+| Tier | Relative price (guideline) |
+| --- | ---:|
+| Entry | $X |
+| Enhanced | $X + 20–40% |
+| Bundle | $X + 80–120% |
+| Exclusive | $X + 250–400% |
+
+**Hierarchy & Emphasis**
 - Most popular tier: larger image or “Best Value” badge
 - Limited editions: quantity counters or “Limited” badges
 - Exclusive tiers: premium treatment (borders, shadows)
+
+> Note: Some campaigns opt for a natural product progression (no explicit bundles) and surface progress directly on product cards. When this fits your catalog better than reward bundles, leverage the Fundpop Product Card Progress Bar to highlight momentum on collection and product pages. See: [Product Card Progress Bar](../widgets/product-card-progress-bar.md).
 
 ### Content Strategy
 
@@ -96,10 +98,10 @@ Entry → Enhanced → Bundle → Exclusive
 ## Advanced Techniques
 
 ### Psychological Pricing
-The Hemeria example uses smart pricing gaps:
-- ~36% jump from book to signed edition
-- ~47% jump to the bundle tier
-- ~127% jump to the premium tier
+Recommended pricing gaps (guidelines):
+- Enhanced: +20–40% vs Entry
+- Bundle: +80–120% vs Entry
+- Exclusive: +250–400% vs Entry
 
 These create clear decision points without overwhelming choice.
 
@@ -115,15 +117,17 @@ These create clear decision points without overwhelming choice.
 
 ## Common Mistakes to Avoid
 
-❌ Inconsistent image sizes
-❌ Too many tier options (choice paralysis)
-❌ Unclear value differences between tiers
-❌ Generic product shots lacking exclusivity or emotion
-❌ Missing mobile optimization
+| Issue | Why it hurts | Fix |
+| --- | --- | --- |
+| Inconsistent image sizes | Unprofessional, breaks grid rhythm | Standardize ratios and dimensions |
+| Too many tier options (choice paralysis) | Lowers conversion | Limit to 3–5 strong options, highlight a “Best Value” |
+| Unclear value differences between tiers | Backers can’t justify price jumps | Bullet benefits; show what’s added per tier |
+| Generic product shots lacking exclusivity or emotion | Fails to convey premium value | Use lifestyle, detail crops, or badges (Limited, Signed) |
+| Missing mobile optimization | Primary device degrades experience | Test on devices; compress <300KB; check contrast |
 
 ## Key Takeaways
 
-1. Visual consistency builds trust
+1. Consistency builds trust
 2. Clear value progression drives upgrades
 3. Scarcity creates urgency
 4. Bundle intelligently to enhance the core offer

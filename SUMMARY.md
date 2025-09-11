@@ -56,6 +56,7 @@
 
 ## BEST PRACTICES
 
-* [🎯 Reward Tier Visual Best Practices](best-practices/variant-images.md)
+* [🎯 Reward Tier Best Practices](best-practices/variant-images.md)
+* [🚀 Crowdfunding Campaign Best Practices](best-practices/general-campaign-best-practices.md)
 * [⚖️ Auto-End vs Manual Ending](best-practices/auto-end-vs-manual.md)
 * [🧭 Collection Targeting Strategies](best-practices/collection-targeting.md)

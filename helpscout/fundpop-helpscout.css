@@ -15,14 +15,19 @@
 */
 
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;600;700;800&family=IBM+Plex+Sans:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;700;800&display=swap');
+
+/* (Headline retirée à la demande) */
 
 /* =============================
    Variables de thème Fundpop
    ============================= */
 :root {
     /* Polices */
-    --fp-font-heading: 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --fp-font-heading: 'Fraunces', 'Nunito', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
     --fp-font-body: 'IBM Plex Sans', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    --fp-page-padding: 24px; /* marge interne commune plus généreuse */
+    --fp-container-max: 1200px; /* largeur max de tout le contenu */
 
     /* Primary (Mulled Wine) */
     --fp-primary-50:  #f5f3f7;
@@ -32,7 +37,7 @@
     --fp-primary-400: #a388b9;
     --fp-primary-500: #8c69a3;
     --fp-primary-600: #5a436a; /* Principale */
-    --fp-primary-700: #4b3759;
+    --fp-primary-700: #1a181c;
     --fp-primary-800: #41304c;
     --fp-primary-900: #3a2b42;
     --fp-primary-950: #231828;
@@ -84,14 +89,28 @@
     --fp-shadow-sm: 0 1px 2px rgba(0,0,0,0.06);
     --fp-shadow-md: 0 6px 18px rgba(35, 24, 40, 0.12);
     --fp-shadow-lg: 0 10px 30px rgba(35, 24, 40, 0.16);
+    
+    /* Héros & cartes (nouveaux tokens) */
+    /* HÉROS — tons Fundpop (violet → sombre) */
+    --fp-hero-from: var(--fp-primary-700);
+    --fp-hero-to: var(--fp-dark-950);
+    /* Overlays colorés inspirés du bandeau X.com */
+    --fp-hero-ov-1: rgba(163, 136, 185, 0.45); /* primary-400 @45% */
+    --fp-hero-ov-2: rgba(183, 154, 122, 0.35); /* secondary-400 @35% */
+    --fp-hero-search-max: 720px;
+    --fp-illustration-size: 120px;
 }
 
 /* =============================
    Base & Typographie
    ============================= */
 html, body {
-    background: var(--fp-neutral-50);
-    color: var(--fp-dark-900);
+    /* Gradient violet couvrant toute la page */
+    background:
+        radial-gradient(1000px 420px at 12% -10%, rgba(163,136,185,0.25) 0%, transparent 60%),
+        radial-gradient(780px 360px at 88% -20%, rgba(183,154,122,0.18) 0%, transparent 55%),
+        linear-gradient(140deg, var(--fp-primary-700) 0%, var(--fp-primary-900) 45%, var(--fp-dark-950) 100%);
+    color: var(--fp-dark-50);
     font-family: var(--fp-font-body);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -99,36 +118,101 @@ html, body {
 
 a {
     color: var(--fp-primary-600);
+    text-decoration: none;
 }
 a:hover, a:focus {
     color: var(--fp-primary-500);
 }
 
+/* Liens à plus fort contraste dans le contenu des articles */
+#fullArticle a,
+.contentWrapper a {
+    color: var(--fp-primary-700);
+    text-decoration: none;
+    font-weight: 600;
+}
+#fullArticle a:hover, #fullArticle a:focus,
+.contentWrapper a:hover, .contentWrapper a:focus {
+    color: var(--fp-primary-800);
+    background: rgba(90, 67, 106, 0.06); /* léger fond pour le survol */
+    outline: 2px solid transparent; /* éviter l’outline bleu par défaut */
+}
+
+/* Accentuer spécifiquement les liens pointant vers d’autres articles Help Scout */
+#fullArticle a[href*="/article/"],
+.contentWrapper a[href*="/article/"] {
+    color: var(--fp-primary-800);
+    text-decoration: none;
+}
+
 /* =============================
    En-tête / Navigation Help Scout
    ============================= */
+.container, .container-fluid, .contentArea, #contentArea, .contentWrapper,
+.site-header .container, .header .container, .docs-hero .container,
+.navbar .navbar-inner .container-fluid, #docsSearch, section.category-list {
+    /* Container commun centré, type Hereby */
+    max-width: var(--fp-container-max) !important;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: var(--fp-page-padding);
+    padding-right: var(--fp-page-padding);
+}
+
+/* Paddings latéraux confortables sur les wrappers clés */
+.contentArea, #contentArea, .contentWrapper { padding-left: var(--fp-page-padding); padding-right: var(--fp-page-padding); }
+/* Aligner les cartes d'accueil avec le logo (marge gauche uniforme) */
+section.category-list { padding-left: var(--fp-page-padding); padding-right: var(--fp-page-padding); }
 .navbar .navbar-inner {
-    height: 64px;
-    background: #fff;
-    border-bottom: 1px solid var(--fp-neutral-200);
+    height: 72px;
+    background: transparent !important; /* laisse voir le gradient de page */
+    border-bottom: none;
+    /* Supprimer le padding Bootstrap qui décale le logo vers la droite */
+    padding-left: 0 !important;
+    padding-right: 0 !important;
 }
 
 .navbar .navbar-inner .container-fluid {
-    height: 64px;
-    padding: 0 16px;
+    height: 72px;
+    padding: 0 var(--fp-page-padding);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    /* Le logo doit être complètement à gauche → conteneur pleine largeur */
+    width: 100%;
+    /* Container commun centré (colle le logo au bord gauche du container) */
+    max-width: var(--fp-container-max) !important;
+    margin: 0 auto;
 }
 
 .navbar .brand {
     padding: 0;
-    margin-left: 0;
+    margin-left: 0; /* l'offset est géré par le padding du container-fluid */
+    display: flex;
+    align-items: center;
+    /* Neutraliser les styles par défaut de Help Scout qui rétrécissent et masquent le logo */
+    text-indent: 0 !important;
+    width: auto !important;
+    height: auto !important;
+    background: none !important;
 }
 
 a.brand > img {
     height: 56px;
     width: auto;
-    vertical-align: middle;
+    display: block;
+    /* Compense le blanc interne du fichier du logo pour aligner le "F" sur la grille */
+    margin-left: -8px;
 }
 
+.navbar .nav {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
 .navbar .nav li {
     display: inline-block;
     float: none;
@@ -139,21 +223,30 @@ a.brand > img {
 
 .navbar .nav li a, .navbar .icon-private-w {
     font-size: 14px;
-    color: var(--fp-dark-700);
+    color: #ffffff;
 }
-.navbar .nav li a:hover {
-    color: var(--fp-primary-600);
+.navbar .nav li a:hover, .navbar .nav li a:focus {
+    color: var(--fp-neutral-100);
+    text-decoration: underline;
+    text-underline-offset: 3px;
 }
 
 /* =============================
    Barre de recherche d’accueil
    ============================= */
 #docsSearch {
-    background: #fff;
-    border-top: 1px solid var(--fp-neutral-200);
-    border-bottom: 1px solid var(--fp-neutral-200);
-    padding: 24px 0 28px;
-    margin-bottom: 2.5em;
+    background: transparent !important; /* héro transparent sur gradient */
+    border-top: none;
+    border-bottom: none;
+    padding: 56px var(--fp-page-padding) 40px; /* padding horizontal aligné au contenu */
+    min-height: 240px;
+    margin: 0 auto 2.5em; /* centré dans le container commun */
+    max-width: var(--fp-container-max);
+    text-align: center;
+    /* Centrage fiable du H1 et de la barre de recherche sur desktop */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 #docsSearch h1 {
@@ -162,32 +255,164 @@ a.brand > img {
     text-align: center;
     font-family: var(--fp-font-heading);
     font-weight: 700;
-    font-size: 32px;
-    color: var(--fp-primary-600);
+    font-size: clamp(36px, 4.6vw, 56px);
+    color: #fff;
+}
+
+/* h2 d'accueil alignés sur le h1 (centrés, même police et couleur) */
+#docsSearch h2 {
+    margin: .25em 0 .5em;
+    text-align: center;
+    font-family: var(--fp-font-heading);
+    font-weight: 700;
+    color: #fff;
+    font-size: clamp(22px, 2.8vw, 32px);
+}
+
+/* Forme de recherche centrée et dimensionnée comme Hereby */
+#docsSearch #searchBar {
+    width: 520px !important;
+    margin: 0 auto;
+}
+
+#docsSearch #searchBar input.search-query {
+    width: 100%;
+    border: 1px solid var(--fp-neutral-300) !important;
+    border-radius: 999px !important;
+    padding: 16px 20px !important;
+    height: 48px;
+}
+
+/* Bouton placé dans le searchBar (cas Help Scout) */
+#docsSearch #searchBar button {
+    height: 48px;
+    background: #ffffff !important;
+    color: var(--fp-primary-700) !important;
+    border: 1px solid rgba(255,255,255,0.85) !important;
+    box-shadow: var(--fp-shadow-sm);
+    font-weight: 700;
+    /* Fusion avec l'input: supprime le fin filet blanc à droite */
+    border-left: 0 !important;
+    margin-left: -1px; /* chevauchement de la bordure de l'input */
+    border-top-left-radius: 0 !important;
+    border-bottom-left-radius: 0 !important;
+}
+
+#docsSearch #searchBar button:hover,
+#docsSearch #searchBar button:focus {
+    background: var(--fp-primary-600) !important;
+    color: #fff !important;
+    border-color: var(--fp-primary-700) !important;
+    box-shadow: var(--fp-shadow-md);
+}
+
+/* Icône de loupe du bouton (20px blanche, centrée) */
+#docsSearch #searchBar button {
+    display: grid;
+    place-items: center;
+}
+#docsSearch #searchBar button .icon-search {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+}
+#docsSearch #searchBar button .icon-search::before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
+}
+
+/* Responsive: searchBar prend toute la largeur sur mobile */
+@media (max-width: 768px) {
+    #docsSearch #searchBar { width: 100% !important; }
+}
+
+/* Sous-titre optionnel sous le H1 (ajoutez un <p class="sub"> …) */
+#docsSearch p.sub {
+    margin: 0 0 16px;
+    color: rgba(255,255,255,0.85);
+    font-size: 18px;
 }
 
 input.search-query {
     border-radius: 999px;
     border: 1px solid var(--fp-neutral-300);
-    padding: 12px 18px;
+    padding: 16px 20px;
     font-family: var(--fp-font-body);
     font-weight: 400;
     letter-spacing: .01em;
+}
+
+/* Bouton Search stylé pour le héros */
+#docsSearch .btn, #search-query .btn {
+    background: #ffffff !important;
+    color: var(--fp-primary-700) !important;
+    border: 1px solid rgba(255,255,255,0.85) !important;
+    height: 48px;
+    padding: 0 20px;
+    box-shadow: var(--fp-shadow-sm);
+    font-weight: 700;
+}
+#docsSearch .btn:hover, #docsSearch .btn:focus,
+#search-query .btn:hover, #search-query .btn:focus {
+    background: var(--fp-primary-600) !important;
+    color: #fff !important;
+    border-color: var(--fp-primary-700) !important;
+    box-shadow: var(--fp-shadow-md);
+}
+
+/* Harmoniser le champ de recherche sur fond sombre du héros */
+#docsSearch input.search-query {
+    background: rgba(255,255,255,0.95);
+    border-color: rgba(255,255,255,0.5);
+    box-shadow: var(--fp-shadow-sm);
+}
+
+/* Bouton du champ de recherche global (en-tête / barre fixe) */
+#searchBar .btn,
+#searchBar button,
+.searchBar .btn {
+    background: var(--fp-primary-600) !important;
+    color: #fff !important;
+    border: 1px solid var(--fp-primary-700) !important;
+}
+#searchBar .btn:hover,
+#searchBar button:hover,
+.searchBar .btn:hover,
+#searchBar .btn:focus,
+#searchBar button:focus,
+.searchBar .btn:focus {
+    background: var(--fp-primary-500) !important;
+    color: #fff !important;
+    border-color: var(--fp-primary-600) !important;
 }
 
 /* =============================
    Listes de catégories (Accueil)
    ============================= */
 .category-list {
-    text-align: center;
+    /* 3 colonnes sur desktop, centré dans le container commun */
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    text-align: initial;
+    max-width: var(--fp-container-max);
+    margin: 0 auto;
 }
 
 section.category-list .category {
     position: relative;
     box-sizing: border-box;
-    width: 31.6%;
-    margin: 0 1% 20px;
-    padding: 120px 20px 18px;
+    width: auto;            /* géré par la grille */
+    margin: 0;              /* géré par la grille (gap) */
+    padding: 20px;
+    min-height: 180px;
+    overflow: hidden;
     background: #fff;
     border: 1px solid var(--fp-neutral-200);
     border-radius: var(--fp-radius-lg);
@@ -195,42 +420,57 @@ section.category-list .category {
     transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
 
+/* Alignement centré verticalement du contenu dans la carte */
+section.category-list .category .category-content,
+.category { display: flex; flex-direction: column; justify-content: center; }
+
 section.category-list .category:hover {
     transform: translateY(-2px);
-    box-shadow: var(--fp-shadow-md);
+    box-shadow: var(--fp-shadow-lg);
     border-color: var(--fp-primary-200);
 }
 
-/* Icône en haut des cartes catégories */
-section.category-list .category::before {
-    content: "";
-    position: absolute;
-    top: 16px;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 96px;
-    height: 96px;
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    border-radius: 20px;
-    box-shadow: 0 6px 16px rgba(90, 67, 106, 0.12);
-    background-color: var(--fp-primary-50);
-}
+/* Illustration en coin bas droit (image définie plus bas par ID) */
+section.category-list .category::before { content: none; }
 
 .category-list h3 {
     margin-top: 0;
     font-family: var(--fp-font-heading);
     font-weight: 700;
     font-size: 20px;
-    color: var(--fp-primary-600);
+    color: var(--fp-dark-900); /* titres des collections (style Hereby) */
+    text-align: center;
 }
 
 .category-list ul.article-list a {
     color: var(--fp-dark-700);
+    text-decoration: none;
 }
 .category-list ul.article-list a:hover {
     color: var(--fp-primary-600);
+    text-decoration: none;
+}
+
+/* Masquer le compteur et le paragraphe de la carte (style Hereby) */
+.category .article-count, .category p {
+    display: none;
+}
+
+/* Puces d'articles "spark" (à la Lex) */
+.category-list ul.article-list li,
+ul.article-list li {
+    list-style: none;
+    margin: 8px 0;
+    padding-left: 28px;
+    position: relative;
+}
+.category-list ul.article-list li::before,
+ul.article-list li::before {
+    content: "";
+    width: 16px; height: 16px;
+    position: absolute; left: 0; top: 3px;
+    background: url('https://example-cdn.fundpop.com/helpscout-icons/spark.svg') center/contain no-repeat;
+    filter: drop-shadow(0 1px 0 rgba(0,0,0,.08));
 }
 
 /* =============================
@@ -248,20 +488,56 @@ section.category-list .category::before {
 
 #sidebar .nav-list a {
     display: inline-block;
-    color: var(--fp-primary-700);
+    color: rgba(255,255,255,0.9);
     font-size: 14px;
     padding: 6px 12px 6px 0;
     line-height: 20px;
     font-family: var(--fp-font-body);
 }
 
+#sidebar .nav-list a:hover,
+#sidebar .nav-list a:focus { color: #ffffff; text-decoration: none; }
+
 #sidebar .nav-list .active a,
 #sidebar .nav-list .active a:hover,
 #sidebar .nav-list .active a:focus {
-    font-weight: 600;
-    color: var(--fp-primary-600);
+    font-weight: 700;
+    color: #ffffff;
     background: none;
-    text-decoration: underline;
+    text-decoration: none;
+}
+
+/* Recherche dans le menu latéral: dimension cohérente et icône centrée */
+#sidebar #searchBar input.search-query {
+    background: #ffffff;
+    border-color: var(--fp-neutral-200);
+    height: 44px;
+    border-radius: var(--fp-radius-sm);
+    padding: 10px 48px 10px 14px;
+}
+
+#sidebar #searchBar button {
+    height: 44px;
+    width: 44px;
+    right: 8px;
+    border-radius: 8px;
+    display: grid;
+    place-items: center;
+    background: var(--fp-primary-600) !important;
+    color: #fff !important;
+    border: 1px solid var(--fp-primary-700) !important;
+}
+
+/* Icône de loupe adaptée à sa boîte (blanche, 20px, centrée) */
+#sidebar .icon-search:before {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="white"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0 0 16 9.5 6.5 6.5 0 1 0 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/></svg>');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 20px 20px;
 }
 
 /* =============================
@@ -272,6 +548,14 @@ section.category-list .category::before {
     float: right;
     margin-bottom: 2em;
     padding: 32px 0 0 28px;
+}
+
+/* Bloc de contenu en fond blanc avec léger radius et ombre (style Hereby) */
+.contentWrapper {
+    background: #ffffff;
+    border-radius: var(--fp-radius-md);
+    box-shadow: var(--fp-shadow-sm);
+    border: 1px solid var(--fp-neutral-200);
 }
 
 #fullArticle .title,
@@ -314,6 +598,14 @@ section.category-list .category::before {
     color: var(--fp-neutral-700);
 }
 
+/* Hints / admonitions (convertis depuis > [!TIP], [!NOTE], etc.) */
+.fp-hint { line-height: 1.45; }
+.fp-hint p { margin: .25em 0; }
+.fp-hint ul, .fp-hint ol { margin: .25em 0 .25em 1.25em; }
+/* Supprimer l'espace inutile en haut/bas du contenu */
+.fp-hint > div > div:last-child > :first-child { margin-top: 0 !important; }
+.fp-hint > div > div:last-child > :last-child { margin-bottom: 0 !important; }
+
 .contentWrapper p {
     margin-top: -4px;
     word-wrap: break-word;
@@ -332,6 +624,21 @@ section.category-list .category::before {
     border: 1px solid var(--fp-neutral-200);
 }
 
+/* Figures & captions par défaut */
+#fullArticle figure {
+    margin: 1.25em 0 1.75em;
+}
+#fullArticle figure > img {
+    margin: 0; /* la marge est portée par figure pour coller la légende */
+}
+#fullArticle figure > figcaption {
+    text-align: center;
+    color: var(--fp-neutral-700);
+    font-size: 14px;
+    line-height: 1.4;
+    margin-top: 8px;
+}
+
 .articleFoot p,
 .articleFoot time {
     color: var(--fp-neutral-700);
@@ -342,6 +649,22 @@ section.category-list .category::before {
 
 footer p a {
     color: var(--fp-neutral-700);
+}
+
+/* Ruban d'information optionnel */
+.fp-top-ribbon {
+    background: var(--fp-secondary-300);
+    color: #2b221b;
+    text-align: center;
+    padding: 8px 12px;
+    font-weight: 700;
+}
+
+/* Focus visibles et accessibles */
+:where(a, button, input):focus-visible {
+    outline: 3px solid var(--fp-secondary-400);
+    outline-offset: 2px;
+    border-radius: 8px;
 }
 
 /* =============================
@@ -422,15 +745,21 @@ footer p a {
    Responsive
    ============================= */
 @media screen and (max-width: 1105px) {
-    section.category-list .category { width: 48.2%; }
+    /* garder de bons paddings lorsque le conteneur s'élargit beaucoup en desktop */
+    .navbar .navbar-inner .container-fluid { padding: 0 12px; }
+    #docsSearch { padding: 48px 12px 32px; }
+    .category-list { grid-template-columns: repeat(2, 1fr); }
 }
 
 @media screen and (max-width: 760px) {
+    .category-list { grid-template-columns: 1fr; }
     section.category-list .category {
-        width: 100%;
-        margin: 0 0 20px;
-        padding: 110px 16px 16px;
+        padding: 16px;
+        min-height: 160px;
     }
+    .navbar .navbar-inner .container-fluid { padding: 0 10px; }
+    #docsSearch { padding: 40px 10px 28px; }
+    #docsSearch #searchBar { width: 100% !important; }
 }
 
 @media (max-width: 480px) {

@@ -11,6 +11,14 @@ async function loadDeps() {
   const remarkRehypeMod = await import('remark-rehype');
   const rehypeRawMod = await import('rehype-raw');
   const rehypeSanitizeMod = await import('rehype-sanitize');
+  // Schéma de sanitisation par défaut (pour lister/étendre les balises autorisées)
+  let sanitizeSchemaMod = null;
+  try {
+    // hast-util-sanitize >=5 exporte defaultSchema en ESM
+    sanitizeSchemaMod = await import('hast-util-sanitize');
+  } catch (_) {
+    sanitizeSchemaMod = null;
+  }
   const rehypeSlugMod = await import('rehype-slug');
   const rehypeStringifyMod = await import('rehype-stringify');
   const visitMod = await import('unist-util-visit');
@@ -22,6 +30,7 @@ async function loadDeps() {
     remarkRehype: remarkRehypeMod.default || remarkRehypeMod,
     rehypeRaw: rehypeRawMod.default || rehypeRawMod,
     rehypeSanitize: rehypeSanitizeMod.default || rehypeSanitizeMod,
+    defaultSanitizeSchema: (sanitizeSchemaMod && (sanitizeSchemaMod.defaultSchema || sanitizeSchemaMod.github || sanitizeSchemaMod.default)) || null,
     rehypeSlug: rehypeSlugMod.default || rehypeSlugMod,
     rehypeAutolinkHeadings: null,
     rehypeStringify: rehypeStringifyMod.default || rehypeStringifyMod,
@@ -38,6 +47,35 @@ function hintStyle(type) {
     danger: { border: '#ef4444', bg: '#fef2f2', label: 'Important.' },
   };
   return styles[type] || styles.note;
+}
+
+function deriveDefaultAssetBaseUrl() {
+  // Tente de déduire https://raw.githubusercontent.com/<owner>/<repo>/<branch>
+  try {
+    const { spawnSync } = require('child_process');
+    const remote = spawnSync('git', ['remote', 'get-url', 'origin'], { encoding: 'utf8' });
+    if (remote.status !== 0) throw new Error('no git remote');
+    const rawUrl = String(remote.stdout || '').trim();
+    if (!rawUrl) throw new Error('empty remote');
+    // Formats possibles: https://github.com/owner/repo.git ou git@github.com:owner/repo.git
+    let m = rawUrl.match(/github\.com[/:]([^/]+)\/([^\.]+)(?:\.git)?$/i);
+    if (!m) throw new Error('not github');
+    const owner = m[1];
+    const repo = m[2];
+    let branch = 'main';
+    const br = spawnSync('git', ['rev-parse', '--abbrev-ref', 'HEAD'], { encoding: 'utf8' });
+    if (br.status === 0) {
+      const b = String(br.stdout || '').trim();
+      if (b) branch = b;
+    }
+    return `https://raw.githubusercontent.com/${owner}/${repo}/${branch}`;
+  } catch (_) {
+    // Fallback GitHub Actions
+    const repo = process.env.GITHUB_REPOSITORY; // owner/repo
+    const ref = process.env.GITHUB_REF_NAME || 'main';
+    if (repo) return `https://raw.githubusercontent.com/${repo}/${ref}`;
+    return '';
+  }
 }
 
 function stripFrontmatter(src) {
@@ -86,7 +124,7 @@ function rehypeHints({ visit }) {
           const style = hintStyle(type);
           node.tagName = 'div';
           node.properties = node.properties || {};
-          node.properties.style = `border-left:4px solid ${style.border};padding:12px 16px;background:${style.bg};border-radius:6px;margin:16px 0`;
+          node.properties.style = `border-left:4px solid ${style.border};padding:10px 12px;background:${style.bg};border-radius:6px;margin:10px 0`;
           if (node.children[0] && node.children[0].children && node.children[0].children[0]) {
             node.children[0].children[0].value = node.children[0].children[0].value.replace(/^\[![^\]]+\]\s*/i, '');
           }
@@ -166,6 +204,7 @@ async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages, file
   const mdNoFm = stripFrontmatter(mdRaw);
   const mdPrepared = replaceGitbookHints(mdNoFm);
   const inferredTitle = extractTitleFromMarkdown(mdNoFm);
+  const resolvedAssetBaseUrl = assetBaseUrl || deriveDefaultAssetBaseUrl();
   const file = await unified()
     .use(remarkParse)
     .use(remarkGfm)
@@ -173,7 +212,22 @@ async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages, file
     .use(remarkRehype, { allowDangerousHtml: true })
     .use(rehypeRaw)
     .use(rehypeSlug)
-    .use(rehypeSanitize)
+    // Autoriser figure/figcaption pour conserver les légendes d’images
+    .use(rehypeSanitize, (() => {
+      try {
+        const base = DEPS.defaultSanitizeSchema || {};
+        const schema = JSON.parse(JSON.stringify(base));
+        schema.tagNames = Array.from(new Set([...(schema.tagNames || []), 'figure', 'figcaption']));
+        schema.attributes = schema.attributes || {};
+        schema.attributes.figure = Array.from(new Set([...(schema.attributes.figure || []), 'className', 'style']));
+        schema.attributes.figcaption = Array.from(new Set([...(schema.attributes.figcaption || []), 'className', 'style']));
+        schema.attributes.img = Array.from(new Set([...(schema.attributes.img || []), 'src', 'alt', 'title', 'width', 'height', 'loading', 'decoding', 'style']));
+        return schema;
+      } catch (_) {
+        // fallback: laisser passer la config par défaut si le schéma n'est pas dispo
+        return undefined;
+      }
+    })())
     .use(rehypeStringify)
     .process(mdPrepared);
   let rawHtml = String(file);
@@ -182,7 +236,7 @@ async function convertFile(inputPath, { assetBaseUrl, linkMap, embedImages, file
   if (title) {
     rawHtml = rawHtml.replace(/<h1[^>]*>[\s\S]*?<\/h1>/i, '');
   }
-  const html = postProcessHtml(rawHtml, { assetBaseUrl, linkMap, baseDir: path.dirname(inputPath), embedImages, fileMap });
+  const html = postProcessHtml(rawHtml, { assetBaseUrl: resolvedAssetBaseUrl, linkMap, baseDir: path.dirname(inputPath), embedImages, fileMap });
   return { html, title };
 }
 
@@ -206,7 +260,11 @@ function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages, fi
       danger: { border: '#ef4444', bg: '#fef2f2', icon: '⛔' },
     };
     const s = styleMap[type] || styleMap.note;
-    return `<div style="border-left:4px solid ${s.border};background:${s.bg};border-radius:8px;padding:14px 16px;margin:16px 0"><div style="display:flex;gap:12px;align-items:flex-start"><div style="font-size:20px;line-height:1;margin-top:2px">${s.icon}</div><div style="margin:0">${content}</div></div></div>`;
+    // Resserre les marges internes si le contenu est un seul paragraphe
+    const contentTight = /^\s*<p>[\s\S]*<\/p>\s*$/i.test(content)
+      ? content.replace(/<p>/i, '<p style="margin:0">')
+      : content;
+    return `<div class="fp-hint fp-hint-${type}" style="border-left:4px solid ${s.border};background:${s.bg};border-radius:6px;padding:10px 12px;margin:10px 0"><div style="display:flex;gap:10px;align-items:flex-start"><div style="font-size:18px;line-height:1;margin-top:2px">${s.icon}</div><div style="margin:0">${contentTight}</div></div></div>`;
   });
 
   out = out.replace(/<img([^>]*?)\s+src="(?!https?:|data:)([^"]+)"/gi, (m, pre, src) => {
@@ -233,6 +291,27 @@ function postProcessHtml(html, { assetBaseUrl, linkMap, baseDir, embedImages, fi
       return `<img${pre} src="${pref}"`;
     }
     return m;
+  });
+
+  // Appliquer un style par défaut aux figures/captions pour un rendu homogène dans Help Scout
+  out = out.replace(/<figure>([\s\S]*?)<\/figure>/gi, (block) => {
+    let b = block;
+    // Image sans marge pour coller la légende
+    b = b.replace(/<img([^>]*)>/i, (m2, pre) => {
+      if (/style=/i.test(pre)) {
+        return `<img${pre.replace(/style="([^"]*)"/i, (s, v) => ` style="${v};margin:0;max-width:100%;height:auto;"`)}>`;
+      }
+      return `<img${pre} style="margin:0;max-width:100%;height:auto;">`;
+    });
+    // Légende centrée, petite et grisée
+    b = b.replace(/<figcaption([^>]*)>/i, (m3, pre) => {
+      const style = 'text-align:center;color:#6a6a6a;font-size:14px;line-height:1.4;margin-top:8px';
+      if (/style=/i.test(pre)) {
+        return `<figcaption${pre.replace(/style="([^"]*)"/i, (s, v) => ` style="${v};${style}"`)}>`;
+      }
+      return `<figcaption${pre} style="${style}">`;
+    });
+    return b;
   });
 
   // Réécriture des liens relatifs .md vers URLs Help Scout absolues à partir du mapping + snapshot

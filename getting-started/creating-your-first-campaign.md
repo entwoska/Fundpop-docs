@@ -83,22 +83,21 @@ Set your funding target:
    * Optionally set initial funding
    * Add initial backer count if desired
 
-{% hint style="info" %}
-### Initial Funding and backer count
-
-When setting up your campaign goal, you have the option to add initial funding to your campaign. This feature allows you to account for:
-
-* Contributions collected offline or through other channels
-* Pre-campaign commitments from early supporters
-* Funding secured before the official campaign launch
-* Previous sales that should count toward your campaign total
-
-**How Initial Funding Works:**
-
-* The initial funding amount is added to your campaign progress from the moment it launches
-* Progress bars and statistics will reflect this initial amount immediately
-* Your campaign's success calculation includes this initial funding when determining if you've hit your goal
-{% endhint %}
+> [!INFO]
+> ### Initial Funding and backer count
+>
+> When setting up your campaign goal, you have the option to add initial funding to your campaign. This feature allows you to account for:
+>
+> * Contributions collected offline or through other channels
+> * Pre-campaign commitments from early supporters
+> * Funding secured before the official campaign launch
+> * Previous sales that should count toward your campaign total
+>
+> **How Initial Funding Works:**
+>
+> * The initial funding amount is added to your campaign progress from the moment it launches
+> * Progress bars and statistics will reflect this initial amount immediately
+> * Your campaign's success calculation includes this initial funding when determining if you've hit your goal
 
 <figure><img src="../.gitbook/assets/FP-campaign-5.png" alt=""><figcaption><p>Campaign goal section displaying both options</p></figcaption></figure>
 
@@ -159,18 +158,17 @@ Effect:
 * When your goal is reached, the campaign ends automatically
 * Customers won’t be able to place new pre-orders after auto-end
 
-{% hint style="info" %}
-#### Automatic Payment Processing
-
-Fundpop automatically handles payments when campaigns end:
-
-* **All-or-nothing campaigns**: Payments are automatically captured only if the campaign succeeds
-* **Flexible campaigns**: Payments are automatically captured regardless of campaign success
-
-This automation streamlines your post-campaign workflow and ensures timely payment processing. \
-\
-[⚠️](https://emojipedia.org/warning) After a campaign ends, we recommend consulting your Fundpop dashboard to verify payment processing status. Review your Orders section to confirm all payments were successfully captured and  identify any orders that may require manual attention or intervention.
-{% endhint %}
+> [!INFO]
+> #### Automatic Payment Processing
+>
+> Fundpop automatically handles payments when campaigns end:
+>
+> * **All-or-nothing campaigns**: Payments are automatically captured only if the campaign succeeds
+> * **Flexible campaigns**: Payments are automatically captured regardless of campaign success
+>
+> This automation streamlines your post-campaign workflow and ensures timely payment processing. \
+> \
+> [⚠️](https://emojipedia.org/warning) After a campaign ends, we recommend consulting your Fundpop dashboard to verify payment processing status. Review your Orders section to confirm all payments were successfully captured and  identify any orders that may require manual attention or intervention.
 
 <figure><img src="../.gitbook/assets/FP-campaign-7.png" alt=""><figcaption><p> Order options section with pre-order settings</p></figcaption></figure>
 
