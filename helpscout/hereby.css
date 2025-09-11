@@ -1127,87 +1127,20 @@ body {
     }
 }
 
-#category-412, #category-555 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137838c00c03d6720754968/file-nMfTg6upq0.png);
-}
-
-#category-408, #category-583 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137838512c07c18afdd1a00/file-T3Urwf0RdC.png);
-}
-
-#category-511, #category-559 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137836812c07c18afdd19ff/file-JrY2PZC6rZ.png);
-}
-
-#category-397, #category-584 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137837300c03d6720754966/file-dQKTtga9Ch.png);
-}
-
-#category-407, #category-585 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137837a00c03d6720754967/file-GGrVX3UuPS.png);
-}
-
-#category-411, #category-586 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783982b380503dfdeebca/file-s4sX3roUYN.png);
-}
-
-#category-410, #category-588 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/6137836012c07c18afdd19fe/file-TfdpZunZ1P.png);
-}
-
-#category-713 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613679c012c07c18afdd167a/file-oUhm3wt4HO.png);
-    width: 75% !important;
-    margin-top: 25px !important;
-}
-
-#category-673 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613679c012c07c18afdd167a/file-oUhm3wt4HO.png);
-}
-
-#category-674 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783d22b380503dfdeebcc/file-in5dPp2E52.png);
-}
-
-#category-675 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783fd2bd60b76c2e6c00f/file-8Xn6TsitJS.png);
-}
-
-#category-677 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783e36c65aa15b87d7e16/file-mkJu8TtPjW.png);
-}
-
-#category-735 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783f400c03d672075496a/file-staRQuy3Tm.png);
-    order: -1;
-}
-
-#category-714 {
-    background-size: 200px 200px;
-    background-image: url(https://s3.amazonaws.com/helpscout.net/docs/assets/5769525d9033601c8a8ec820/images/613783982b380503dfdeebca/file-s4sX3roUYN.png);
-    width: 75% !important;
-    margin-top: 25px !important;
-}
-
-#collection-category-308, #support-center {
-    display: none;
-}
-
 /* TEST: Introduction (ID réel 15) → image depuis GitHub (dossier helpscout/tiles) */
 #category-15 {
     background-size: 200px 200px;
     background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%201.png);
+}
+
+/* Getting Started (ID 16) */
+#category-16 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%202.png);
+}
+
+/* Customizations (ID 17) */
+#category-17 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%203.png);
 }
