@@ -1107,11 +1107,11 @@ hr {
 
 footer {
     padding-top: 248px;
-    color: var(--color-grey-dark) !important;
+    color: var(--color-white) !important;
 }
 
 footer p, footer span, footer a {
-    color: var(--color-grey-dark) !important;
+    color: var(--color-white) !important;
     font-size: var(--font-size-small);
 }
 
@@ -1143,4 +1143,28 @@ body {
 #category-17 {
     background-size: 200px 200px;
     background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%203.png);
+}
+
+/* Campaign Management (ID 18) */
+#category-18 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%204.png);
+}
+
+/* Advanced Features (ID 19) */
+#category-19 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%205.png);
+}
+
+/* Widgets (ID 49) */
+#category-49 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%206.png);
+}
+
+/* Best Practices (ID 20) */
+#category-20 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%207.png);
 }
