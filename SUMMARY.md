@@ -18,18 +18,12 @@
 * [✍️ Translation](customizations/translation.md)
 * [🧪 Previewing Widgets with Draft Campaigns](customizations/widget-preview-drafts.md)
 
-## WIDGETS
 
-* [🧱 Main Widget](widgets/main-widget.md)
-* [🎁 Reward Tiers Widget](widgets/reward-tiers-widget.md)
-* [📊 Product Card Progress Bar](widgets/product-card-progress-bar.md)
-* [🌟 Featured Campaign Widget](widgets/featured-campaign-widget.md)
-* [🗂️ Campaign Collection Widget](widgets/campaign-collection-widget.md)
+
 
 ## CAMPAIGN MANAGEMENT
 
 * [🛒 Orders](campaign-management/orders.md)
-* [📊 Campaign Analytics](campaign-management/campaign-analytics.md)
 * [⏱️ Campaign Timing](campaign-management/campaign-timing.md)
 
 ## ADVANCED FEATURES

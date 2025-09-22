@@ -78,7 +78,7 @@ For illustration purposes, here are tactics observed in a musical artist campaig
 - Natural product progression instead of bundles: start with entry items (CD, tee), then mid‑tier (vinyl, signed), up to premium limited items. Clear steps encourage upgrades without overwhelming choice.
 - Scarcity surfaced prominently: “Sold out” badges and live counters (Sold / Left) below each product increase urgency.
 - Wide price ladder: multiple price points to match different backer budgets, while anchoring with a few premium items.
-- Homepage highlighting: key products were showcased using the Fundpop Product Card Progress Bar to drive discovery and momentum. See: [Product Card Progress Bar](../widgets/product-card-progress-bar.md).
+- Homepage highlighting: key products were showcased using the Fundpop Product Card Progress Bar to drive discovery and momentum. See: [Product Card Progress Bar](../customizations/extended-widget-placement.md#product-card-progress-bar).
 - Campaign status clarity: explicit “This campaign has ended” banner and a visible progress bar set expectations and add credibility.
 
-<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/best-practices-julien-k-product-grid.png" alt="Campaign products grid"><figcaption><p>Homepage products grid capture from a Julien-K campaign</p></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/best-practices-julien-k-product-grid.png" alt="Campaign products grid"><figcaption><p>Replicate this layout: highlight momentum on cards and surface scarcity</p></figcaption></figure>

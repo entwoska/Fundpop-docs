@@ -17,8 +17,15 @@
     "publish:campaign": "SECTION_NAME=CAMPAIGN MANAGEMENT PUBLISH=1 node scripts/publish-helpscout-apply.js",
     "publish:advanced": "SECTION_NAME=ADVANCED FEATURES PUBLISH=1 node scripts/publish-helpscout-apply.js",
     "build:live-index": "node scripts/build-live-index.js",
+    "fix:duplicates:campaign-timing": "node scripts/unpublish-duplicates-campaign-timing.js",
     "publish:all": "ASSET_BASE_URL=https://raw.githubusercontent.com/entwoska/Fundpop-docs/main FORCE_RECONVERT=1 node scripts/publish-all-by-index.js",
-    "audit:structure": "node scripts/audit-structure.js"
+    "audit:structure": "node scripts/audit-structure.js",
+    "helpscout:remove-widgets:dryrun": "node scripts/remove-widgets-category.js",
+    "helpscout:remove-widgets": "WIDGETS_DELETE=1 node scripts/remove-widgets-category.js --apply",
+    "helpscout:rebuild-index": "node scripts/build-live-index.js",
+    "helpscout:delete-article:dryrun": "node scripts/delete-article.js",
+    "helpscout:delete-article": "APPLY=1 node scripts/delete-article.js",
+    "publish:customizations+getting-started+best-practices": "SECTION_NAME=Customizations PUBLISH=1 node scripts/publish-helpscout-apply.js && SECTION_NAME=Getting Started PUBLISH=1 node scripts/publish-helpscout-apply.js && SECTION_NAME=BEST PRACTICES PUBLISH=1 node scripts/publish-helpscout-apply.js"
   },
   "repository": {
     "type": "git",

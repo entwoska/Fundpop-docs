@@ -10,11 +10,11 @@ description: >-
 
 1. After installing the app, you'll see a button to open the Shopify theme editor
 
-<figure><img src="../.gitbook/assets/FP-Onboarding-1.png" alt=""><figcaption><p>Click on the Open customization page button to open your theme editor</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-Onboarding-1.png" alt=""><figcaption><p>Click “Open customization page” to jump straight into your Theme Editor</p></figcaption></figure>
 
 2. Click the button to open the theme editor in a new window - the Fundpop widget will automatically be added to your default product template
 
-<figure><img src="../.gitbook/assets/FP-Onboarding-2.png" alt=""><figcaption><p>Make sure the Default product template is selected and position Fundpop to your desired location</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-Onboarding-2.png" alt=""><figcaption><p>Select the Default product template, then drag the Fundpop block where you want it</p></figcaption></figure>
 
 3. In the editor, drag and drop the Fundpop block to your preferred position on the product page
 
@@ -30,12 +30,12 @@ If you can't access the onboarding flow or prefer manual installation:
 
 1. Go to your Shopify Admin → Online Store section
 
-<figure><img src="../.gitbook/assets/FP-Onboarding-3.png" alt=""><figcaption><p>Open the theme editor for the desired theme</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-Onboarding-3.png" alt=""><figcaption><p>From Online Store → Themes, open the Theme Editor for the right theme</p></figcaption></figure>
 
 2. Select your theme and click Customize
 3. Select the Default product template at the top of the theme editor
 
-<figure><img src="../.gitbook/assets/FP-Onboarding-4.png" alt=""><figcaption><p>Make sure the Default product template is selected</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-Onboarding-4.png" alt=""><figcaption><p>Switch to the Default product template to place the widget on PDPs</p></figcaption></figure>
 
 4. In the left sidebar, locate where you want to place the widget:
 
@@ -43,7 +43,7 @@ If you can't access the onboarding flow or prefer manual installation:
 * Click the + icon between blocks
 * Search for "Fundpop widget" in the apps section
 
-<figure><img src="../.gitbook/assets/FP-Onboarding-5.png" alt=""><figcaption><p>Search for "Fundpop" and add the Fundpop Widget from the Apps section</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-Onboarding-5.png" alt=""><figcaption><p>Search “Fundpop” under Apps and add the Fundpop Widget to your page</p></figcaption></figure>
 
 5. Click save to complete the installation
 
@@ -55,5 +55,5 @@ If you're using an Online Store 1.0 / Vintage theme, contact our team for custom
 * Email: [support@fizzy.studio](mailto:support@fizzy.studio)
 
 > [!TIP]
-> See also: [Main Widget](../widgets/main-widget.md) — overview of the standard Fundpop widget (layout, props, best practices).
+> See also: [Main Widget](../customizations/extended-widget-placement.md#main-widget) — overview of the standard Fundpop widget (layout, props, best practices).
 

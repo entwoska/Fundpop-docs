@@ -142,8 +142,19 @@ async function createOrUpdateArticle({ collectionId, categoryId, siteId, title, 
     // Affecter la catégorie via le champ 'categories' (array) cf. docs
     // https://developer.helpscout.com/docs-api/articles/update/
     const body = { name: title, slug, text: html, status: 'published', categories: [categoryId] };
-    await axiosInstance.put(`articles/${match.id}`, body);
-    return { action: 'update', id: match.id, slug, title, status: 'published' };
+    try {
+      await axiosInstance.put(`articles/${match.id}`, body);
+      return { action: 'update', id: match.id, slug, title, status: 'published' };
+    } catch (e) {
+      if (e?.response?.status === 404) {
+        // L'article référencé n'existe plus; recréer
+        const createBody = { name: title, slug, text: html, status: 'published', collectionId, categories: [categoryId], siteId };
+        const { data } = await axiosInstance.post('articles', createBody);
+        const id = data?.item?.id || data?.id;
+        return { action: 'create', id, slug, title, status: 'published' };
+      }
+      throw e;
+    }
   } else {
     if (DRY_RUN) {
       return { action: 'create', slug, title, status: 'published' };
@@ -324,8 +335,19 @@ async function main() {
         if (globalMatch && globalMatch.id) {
           // Inclure collectionId/siteId pour permettre le déplacement inter-collection
           const body = { name: title, slug, text: html, status: 'published', categories: [categoryId], collectionId, siteId };
-          await axiosInstance.put(`articles/${globalMatch.id}`, body);
-          res = { action: 'update', id: globalMatch.id, slug, title, status: 'published' };
+          try {
+            await axiosInstance.put(`articles/${globalMatch.id}`, body);
+            res = { action: 'update', id: globalMatch.id, slug, title, status: 'published' };
+          } catch (e) {
+            if (e?.response?.status === 404) {
+              // L'ID global n'existe plus, créer à la place
+              const { data } = await axiosInstance.post('articles', body);
+              const id = data?.item?.id || data?.id;
+              res = { action: 'create', id, slug, title, status: 'published' };
+            } else {
+              throw e;
+            }
+          }
         } else {
           res = await createOrUpdateArticle({ collectionId, categoryId, siteId, title, slug, html, existingBySlug, existingByTitle });
         }

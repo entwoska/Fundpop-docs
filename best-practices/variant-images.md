@@ -7,7 +7,7 @@ description: >
 
 Creating compelling reward tiers isn’t just about pricing — it’s a holistic experience (offer design, storytelling, visuals, pricing, scarcity) that nudges backers toward higher‑value contributions. Use these practices to improve clarity, performance, and conversion.
 
-<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/best-practices-variant-images--variant-images-switching-preview--v20250903.png" alt="Fundpop Reward Tiers preview"><figcaption><p>Fundpop Reward Tiers preview - Taken from Ben Thouard’s “Aqua Obscura” (Hemeria)</p></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/best-practices-variant-images--variant-images-switching-preview--v20250903.png" alt="Fundpop Reward Tiers preview"><figcaption><p>Show tier images that switch with variants to make upgrades obvious</p></figcaption></figure>
 
 ## Common Best Practices
 
@@ -62,7 +62,7 @@ For illustration only, the following points highlight common best practices obse
 - Limited editions: quantity counters or “Limited” badges
 - Exclusive tiers: premium treatment (borders, shadows)
 
-> Note: Some campaigns opt for a natural product progression (no explicit bundles) and surface progress directly on product cards. When this fits your catalog better than reward bundles, leverage the Fundpop Product Card Progress Bar to highlight momentum on collection and product pages. See: [Product Card Progress Bar](../widgets/product-card-progress-bar.md).
+> Note: Some campaigns opt for a natural product progression (no explicit bundles) and surface progress directly on product cards. When this fits your catalog better than reward bundles, leverage the Fundpop Product Card Progress Bar to highlight momentum on collection and product pages. See: [Product Card Progress Bar](../customizations/extended-widget-placement.md#product-card-progress-bar).
 
 ### Content Strategy
 

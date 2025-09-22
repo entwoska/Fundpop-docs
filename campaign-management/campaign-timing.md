@@ -23,7 +23,7 @@ Effects:
 * The campaign remains active until the new end date
 * Widgets update automatically to reflect the new timeline
 
-<figure><img src="/.gitbook/assets/campaign-management-campaign-timing--campaign-edit-end-date--v20250903.png" alt="Campaign edit view highlighting the End date field"><figcaption><p>Campaign edit view highlighting the End date field</p></figcaption></figure>
+
 
 ### Auto-End on Goal Achievement
 

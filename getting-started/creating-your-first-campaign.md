@@ -7,7 +7,7 @@ description: >-
 
 # 💰 Creating Your First Campaign
 
-<figure><img src="../.gitbook/assets/FP-campaign-1.png" alt=""><figcaption><p>Fundpop app dashboard with "Create campaign" button</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-1.png" alt=""><figcaption><p>Click “Create campaign” to start configuring your first campaign</p></figcaption></figure>
 
 ### Step 1: General
 
@@ -17,7 +17,7 @@ Start by giving your campaign a name:
 * Enter a name for your campaign (50 character limit)
 * This name will be displayed publicly on your store
 
-<figure><img src="../.gitbook/assets/FP-campaign-2.png" alt=""><figcaption><p>Campaign name field in the General section, displaying a character counter</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-2.png" alt=""><figcaption><p>Name your campaign clearly — this appears on your storefront</p></figcaption></figure>
 
 ### Step 2: Fundpop Widget
 
@@ -32,10 +32,10 @@ The Fundpop widget is what displays your campaign's progress on your store:
    * Check progress bar appearance
    * View backer count and time remaining layout
 
-<figure><img src="../.gitbook/assets/FP-campaign-3.png" alt=""><figcaption><p>Widget section showing template selection and preview</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-3.png" alt=""><figcaption><p>Pick a widget template and preview styling before you proceed</p></figcaption></figure>
 
 > [!TIP]
-> See also: [Main Widget](../widgets/main-widget.md) — full overview of the standard widget (layout, props, variants) and best practices.
+> See also: [Main Widget](../customizations/extended-widget-placement.md#main-widget) — full overview of the standard widget (layout, props, variants) and best practices.
 
 4. Collections Targeting (optional):
 
@@ -53,7 +53,7 @@ This option will be visible for saved campaigns only
 * Click "Pin campaign" to feature this campaign on your homepage
 * Note: Only one campaign can be pinned at a time; pinning a new campaign will replace any previously pinned campaign
 
-<figure><img src="../.gitbook/assets/FP-campaign-8.png" alt=""><figcaption><p>Pin your most important campaign to your store's homepage. This campaign will appear both on your product page and homepage - helpful tip: pin your most active campaign to maximize visibility</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-8.png" alt=""><figcaption><p>Pin the campaign to your homepage to boost discovery and click‑through</p></figcaption></figure>
 
 
 
@@ -69,7 +69,7 @@ Select products to feature in your campaign:
 
 Note: At least one product must be selected to enable features like milestones and bundles.
 
-<figure><img src="../.gitbook/assets/FP-campaign-4.png" alt=""><figcaption><p>Product selection interface</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-4.png" alt=""><figcaption><p>Select products — every sale contributes to the campaign’s progress</p></figcaption></figure>
 
 ### Step 4: Campaign Goal
 
@@ -99,7 +99,7 @@ Set your funding target:
 > * Progress bars and statistics will reflect this initial amount immediately
 > * Your campaign's success calculation includes this initial funding when determining if you've hit your goal
 
-<figure><img src="../.gitbook/assets/FP-campaign-5.png" alt=""><figcaption><p>Campaign goal section displaying both options</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-5.png" alt=""><figcaption><p>Choose a goal type and add initial funding if needed to reflect prior support</p></figcaption></figure>
 
 ### Step 5: Campaign Duration
 
@@ -117,7 +117,7 @@ Configure your campaign timeline:
    * You can extend the end date of an active pre-order campaign when momentum grows
    * Edit your campaign → change end date → save changes
 
-<figure><img src="../.gitbook/assets/FP-campaign-6.png" alt=""><figcaption><p> Duration section with calendar and slider</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-6.png" alt=""><figcaption><p>Set start/end dates now — you can extend an active pre‑order later</p></figcaption></figure>
 
 ### Step 6: Order Options
 
@@ -170,7 +170,7 @@ Effect:
 > \
 > [⚠️](https://emojipedia.org/warning) After a campaign ends, we recommend consulting your Fundpop dashboard to verify payment processing status. Review your Orders section to confirm all payments were successfully captured and  identify any orders that may require manual attention or intervention.
 
-<figure><img src="../.gitbook/assets/FP-campaign-7.png" alt=""><figcaption><p> Order options section with pre-order settings</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/FP-campaign-7.png" alt=""><figcaption><p>Pick Order now or Pre‑order and configure auto‑end for hands‑off processing</p></figcaption></figure>
 
 ### Step 7: Advanced Features (Pro/Premium Only)
 

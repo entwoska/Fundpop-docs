@@ -583,10 +583,13 @@ hr {
 }
 
 #sidebar .nav-list .active a {
-    color: var(--color-blue);
+    color: var(--color-white) !important;
     font-size: var(--font-size-normal);
     line-height: var(--font-line-height-normal);
     font-weight: 600 !important;
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 8px;
+    padding: 0 8px !important;
 }
 
 #sidebar .nav-list .active a i {
@@ -594,7 +597,8 @@ hr {
 }
 
 #sidebar .nav-list .active a::before {
-    content: "-> ";
+    content: "→ ";
+    color: var(--color-white);
 }
 
 #sidebar .nav-list .active a:focus {
@@ -1113,6 +1117,7 @@ footer {
 footer p, footer span, footer a {
     color: var(--color-white) !important;
     font-size: var(--font-size-small);
+    text-align: center !important;
 }
 
 body {
@@ -1157,14 +1162,35 @@ body {
     background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%205.png);
 }
 
-/* Widgets (ID 49) */
-#category-49 {
-    background-size: 200px 200px;
-    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%206.png);
-}
-
 /* Best Practices (ID 57) */
 #category-57 {
     background-size: 200px 200px;
     background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%207.png);
 }
+
+#category-56 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%206.png);
+}
+
+#category-67 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%2013.png);
+}
+
+#category-67 h3 {
+    display: none;
+}
+
+#category-68 {
+    background-size: 200px 200px;
+    background-image: url(https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/helpscout/tiles/image%2014.png);
+}
+
+#category-68 h3 {
+    display: none;
+}
+
+#fullArticle figure { margin: 24px 0 32px !important; }
+#fullArticle figure + figure { margin-top: 32px !important; }
+#fullArticle figure figcaption { margin-top: 8px !important; }
