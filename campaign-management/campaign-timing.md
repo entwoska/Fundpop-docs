@@ -29,6 +29,10 @@ Effects:
 
 Automatically end campaigns when the goal is reached to prevent overselling.
 
+{% hint style="info" %}
+This feature is available on the Premium plan only.
+{% endhint %}
+
 How to enable:
 
 1. In Order Options, toggle "Auto-end on goal"

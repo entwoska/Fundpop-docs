@@ -1011,9 +1011,17 @@ hr {
 .callout {
     border-left: none !important;
     border-radius: 8px;
-    padding: 32px !important;
+    padding: 16px 20px !important;
     background: var(--color-background-info-blue) !important;
 }
+/* Réinitialise la marge appliquée globalement aux div de l'article */
+#fullArticle .callout { margin: 12px 0 !important; }
+#fullArticle .callout:last-child { margin-bottom: 0 !important; }
+
+/* Évite l'espace inutile créé par les marges internes par défaut */
+.callout > :first-child { margin-top: 0 !important; }
+.callout > :last-child { margin-bottom: 0 !important; }
+.callout p { margin: .25em 0 !important; }
 
 .callout h3 {
     margin: 0 0 12px !important;
