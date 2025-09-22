@@ -40,6 +40,6 @@ Behavior:
 * Pre-orders cannot be placed after auto-end
 * Analytics reflect the final status
 
-<figure><img src="/.gitbook/assets/campaign-management-campaign-timing--order-options-auto-end-on-goal-on--v20250903.png" alt="Order Options section with the Auto-end on goal toggle enabled"><figcaption><p>Order Options section with the "Auto-end on goal" toggle enabled</p></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/entwoska/Fundpop-docs/main/.gitbook/assets/campaign-management-campaign-timing--order-options-auto-end-on-goal-enabled--v20250922.png" alt="Order Options section with the Auto-end on goal toggle enabled"><figcaption><p>Order Options section with the "Auto-end on goal" toggle enabled</p></figcaption></figure>
 
 
