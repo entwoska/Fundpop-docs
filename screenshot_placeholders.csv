@@ -11,18 +11,12 @@ widgets/product-card-progress-bar.md,32,Collection grid with progress bars under
 widgets/product-card-progress-bar.md,53,App UI showing color picker, radius/height sliders, font settings, and progress-number options,widgets-product-card-progress-bar--app-ui-color-radius-font-progress-number--v20250903.png
 widgets/product-card-progress-bar.md,62,App UI single-product tab with "Show units left" checked,widgets-product-card-progress-bar--app-ui-single-product-show-units-left--v20250903.png
 customizations/extended-widget-placement.md,44,Widget settings showing a multi-select input for Collections,customizations-extended-widget-placement--widget-settings-collections-multiselect--v20250903.png
-best-practices/collection-targeting.md,22,Collections multi-select in widget settings with a few collections selected,best-practices-collection-targeting--collections-multiselect-selected--v20250903.png
-best-practices/auto-end-vs-manual.md,22,Order Options section focusing on the "Auto-end on goal" toggle,best-practices-auto-end-vs-manual--order-options-auto-end-on-goal-toggle--v20250903.png
 best-practices/variant-images.md,22,Reward Tier preview showing variant images switching on selection,best-practices-variant-images--variant-images-switching-preview--v20250903.png
-faqs/theme-compatibility.md,22,Theme editor showing app embed toggled on,faqs-theme-compatibility--theme-editor-app-embed-on--v20250903.png
 faqs/selling-plan-recovery.md,26,Order Options panel after successful selling plan recovery,faqs-selling-plan-recovery--order-options-after-recovery--v20250903.png
 campaign-management/campaign-timing.md,27,Campaign edit view highlighting the End date field,campaign-management-campaign-timing--campaign-edit-end-date--v20250903.png
 campaign-management/campaign-timing.md,46,Order Options section with the "Auto-end on goal" toggle enabled,campaign-management-campaign-timing--order-options-auto-end-on-goal-on--v20250903.png
-theme-integration/theme-editor-preview.md,19,Theme editor canvas showing a Reward Tiers block for a pending campaign,theme-integration-theme-editor-preview--canvas-reward-tiers-pending--v20250903.png
 advanced-features/reward-tiers.md,135,Variant images mapping UI within the Reward Tier editor,advanced-features-reward-tiers--variant-images-mapping-ui--v20250903.png
 advanced-features/reward-tiers.md,155,Layout selector showing Grid/List with alignment options,advanced-features-reward-tiers--layout-selector-grid-list-alignment--v20250903.png
 advanced-features/reward-tiers.md,171,Translation settings filtered on Reward Tiers keys,advanced-features-reward-tiers--translation-settings-reward-tiers--v20250903.png
 advanced-features/reward-tiers.md,185,Cart modal overlay shown after adding a Reward Tier,advanced-features-reward-tiers--cart-modal-overlay-after-add--v20250903.png
-theme-integration/page-templates.md,20,Theme editor showing "Add block" with Fundpop block selected under a Page template,theme-integration-page-templates--theme-editor-add-block-fundpop-selected--v20250903.png
-theme-integration/compatibility-bypass.md,27,Fundpop Settings → Advanced tab highlighting the "Compatibility bypass" toggle,theme-integration-compatibility-bypass--settings-advanced-compatibility-bypass-toggle--v20250903.png
 customizations/widget-preview-drafts.md,19,Theme editor sidebar with a toggle for "Preview draft campaign",customizations-widget-preview-drafts--theme-editor-sidebar-preview-draft-campaign--v20250903.png

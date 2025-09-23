@@ -82,6 +82,15 @@ function findCategoryIdByName(categories, collectionId, name) {
   return c ? c.id : null;
 }
 
+async function getArticleById(articleId) {
+  try {
+    const { data } = await axiosInstance.get(`articles/${articleId}`);
+    return data.item || data;
+  } catch (_) {
+    return null;
+  }
+}
+
 function ensureConverted(file) {
   const base = path.basename(file, path.extname(file));
   const out = path.join(process.cwd(), '.converted', base + '.html');
@@ -250,11 +259,13 @@ async function main() {
     // Construire un index slug->file depuis tout le mapping
     const slugToFile = new Map();
     const fileToSlug = new Map();
+    const fileToSection = new Map();
     for (const coll of full.collections || []) {
       for (const cat of (coll.categories || [])) {
         for (const art of (cat.articles || [])) {
           if (art.slug) slugToFile.set(art.slug, art.file);
           if (art.file) fileToSlug.set(art.file, art.slug);
+          if (art.file) fileToSection.set(art.file, coll.name || '');
         }
       }
     }
@@ -262,13 +273,7 @@ async function main() {
     for (const id of TARGET_IDS) {
       try {
         // Essayer de récupérer l'article existant pour obtenir son slug
-        let current;
-        try {
-          const { data } = await axiosInstance.get(`articles/${id}`);
-          current = data.item || data;
-        } catch (e) {
-          if (DEBUG_LOG) console.log('GET article failed', e.response?.status, e.response?.data || e.message);
-        }
+        const current = await getArticleById(id);
         let currentSlug = current?.slug;
         // Si TARGET_FILE fourni, déduire slug depuis mapping
         if (TARGET_FILE && fileToSlug.has(TARGET_FILE)) {
@@ -283,8 +288,27 @@ async function main() {
         const fromSummary = summaryTitles.get(file);
         const title = inferred || fromSummary || path.basename(file, path.extname(file));
         const slug = currentSlug || fileToSlug.get(file);
-        // Inclure collectionId pour permettre le déplacement inter-collection si nécessaire
-        const body = { name: title, slug, text: html, status: 'published', categories: [categoryId], collectionId, siteId };
+        // Déterminer la catégorie effective
+        let effectiveCategoryId = categoryId;
+        const explicitSection = process.env.TARGET_CATEGORY || process.env.SECTION_NAME;
+        if (!explicitSection) {
+          // 1) Préserver la catégorie existante si l'article existe déjà
+          const preservedCatId = Array.isArray(current?.categories) && current.categories.length > 0 ? current.categories[0] : null;
+          if (preservedCatId) {
+            effectiveCategoryId = preservedCatId;
+          } else {
+            // 2) Inférer depuis le mapping.yaml à partir du fichier ciblé
+            const sectionName = fileToSection.get(file);
+            if (sectionName) {
+              const inferredCollectionId = findCollectionIdByName(collections, TARGET_COLLECTION_NAME);
+              // Si le nom de section diffère de TARGET_CATEGORY_NAME, retrouver la catégorie par nom
+              const inferredCategoryId = findCategoryIdByName(categories, inferredCollectionId, sectionName);
+              if (inferredCategoryId) effectiveCategoryId = inferredCategoryId;
+            }
+          }
+        }
+        // Inclure collectionId uniquement si nécessaire
+        const body = { name: title, slug, text: html, status: 'published', categories: [effectiveCategoryId], collectionId, siteId };
         if (DEBUG_LOG) {
           console.log('PUT /articles/' + id, JSON.stringify(body).slice(0, 200) + '...');
         }

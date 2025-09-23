@@ -36,21 +36,14 @@
 * [💵 Payments and Fees](faqs/payments-and-fees.md)
 * [📦 Orders and Statuses](faqs/orders-and-statuses.md)
 * [🧯 Selling Plan Recovery](faqs/selling-plan-recovery.md)
-* [🎭 Theme Compatibility](faqs/theme-compatibility.md)
 
 ## RESSOURCES
 
 * [🖥️ Contact us](ressources/contact-us.md)
 
-## THEME INTEGRATION
-
-* [🧩 Page Template Support](theme-integration/page-templates.md)
-* [🛠️ Theme Compatibility Override](theme-integration/compatibility-bypass.md)
-* [👀 Theme Editor Preview](theme-integration/theme-editor-preview.md)
+ 
 
 ## BEST PRACTICES
 
 * [🎯 Reward Tier Best Practices](best-practices/variant-images.md)
 * [🚀 Crowdfunding Campaign Best Practices](best-practices/general-campaign-best-practices.md)
-* [⚖️ Auto-End vs Manual Ending](best-practices/auto-end-vs-manual.md)
-* [🧭 Collection Targeting Strategies](best-practices/collection-targeting.md)
